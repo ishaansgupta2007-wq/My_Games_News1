@@ -1,0 +1,6 @@
+{
+  "name": "GamePulse",
+  "description": "Your daily pulse on gaming. A premium, modern gaming publication featuring breaking news, in-depth reviews, expert guides, upcoming releases, and hardware benchmarks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
