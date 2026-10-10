@@ -27,6 +27,8 @@ export interface Article {
   title: string;
   subtitle?: string;
   excerpt: string;
+  metaTitle?: string;
+  metaDescription?: string;
   category: CategoryType;
   subCategory?: string;
   coverImage: string;
@@ -47,6 +49,10 @@ export interface Article {
       heading: string;
       id: string;
       paragraphs: string[];
+      subSections?: {
+        subHeading: string;
+        paragraphs: string[];
+      }[];
       quote?: {
         text: string;
         author: string;

@@ -11,7 +11,7 @@ export const UPCOMING_GAMES: UpcomingGame[] = [
     countdownDays: 450,
     platforms: ['PlayStation 5'],
     genre: 'Cinematic Sci-Fi Action RPG',
-    status: 'Confirmed 2027',
+    status: 'Confirmed',
     coverImage: '/images/intergalactic.jpg',
     description: 'An uncompromising next-gen hard sci-fi odyssey. Explore shattered ringed planets and wield thermal hard-light blades in zero gravity.',
     hypeScore: 98
