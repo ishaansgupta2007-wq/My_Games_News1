@@ -25,9 +25,9 @@ export const GuideCard: React.FC<GuideCardProps> = ({ guide, onSelect }) => {
   return (
     <div
       onClick={() => onSelect(guide.slug)}
-      className="group flex flex-col rounded-xl overflow-hidden bg-neutral-900/70 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900 transition-all cursor-pointer shadow-lg"
+      className="group flex flex-col rounded-xl overflow-hidden bg-white dark:bg-neutral-900/70 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 hover:bg-slate-50 dark:hover:bg-neutral-900 transition-all cursor-pointer shadow-xs dark:shadow-lg"
     >
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-950">
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100 dark:bg-neutral-950">
         <SafeImage
           src={guide.coverImage}
           alt={guide.title}
@@ -35,11 +35,11 @@ export const GuideCard: React.FC<GuideCardProps> = ({ guide, onSelect }) => {
           className="w-full h-full"
         />
         <div className="absolute top-3 left-3 flex items-center gap-2">
-          <span className="px-2.5 py-1 rounded bg-neutral-950/80 backdrop-blur border border-neutral-800 text-[11px] font-mono font-medium text-white">
+          <span className="px-2.5 py-1 rounded bg-white/90 dark:bg-neutral-950/80 backdrop-blur border border-neutral-200 dark:border-neutral-800 text-[11px] font-mono font-medium text-neutral-800 dark:text-white shadow-2xs">
             {guide.type}
           </span>
           <span
-            className={`px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider border bg-neutral-950/80 backdrop-blur ${getDifficultyColor(
+            className={`px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider border bg-white/90 dark:bg-neutral-950/80 backdrop-blur shadow-2xs ${getDifficultyColor(
               guide.difficulty
             )}`}
           >
@@ -50,20 +50,20 @@ export const GuideCard: React.FC<GuideCardProps> = ({ guide, onSelect }) => {
 
       <div className="flex flex-col justify-between flex-1 p-5">
         <div>
-          <span className="text-xs font-mono text-neutral-400 mb-1.5 block">
+          <span className="text-xs font-mono text-neutral-500 dark:text-neutral-400 mb-1.5 block">
             {guide.gameTitle}
           </span>
 
-          <h3 className="text-base font-bold text-white group-hover:text-rose-200 transition-colors font-display line-clamp-2 mb-2 leading-snug">
+          <h3 className="text-base font-bold text-neutral-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-200 transition-colors font-display line-clamp-2 mb-2 leading-snug">
             {guide.title}
           </h3>
 
-          <p className="text-xs sm:text-sm text-neutral-400 line-clamp-2 leading-relaxed mb-4">
+          <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2 leading-relaxed mb-4">
             {guide.excerpt}
           </p>
         </div>
 
-        <div className="flex items-center justify-between pt-3 border-t border-neutral-800/70 text-xs text-neutral-500">
+        <div className="flex items-center justify-between pt-3 border-t border-neutral-200 dark:border-neutral-800/70 text-xs text-neutral-500">
           <span className="flex items-center gap-1.5">
             <BookOpen className="w-3.5 h-3.5 text-neutral-400" />
             {guide.stepsCount} Steps

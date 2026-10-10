@@ -3,9 +3,10 @@ import { Flame, Twitter, Youtube, Disc as Discord, Rss, ArrowUp } from 'lucide-r
 
 interface FooterProps {
   onNavigate: (path: string) => void;
+  isDark?: boolean;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate, isDark = true }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -36,7 +37,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <footer className="w-full bg-neutral-950 border-t border-neutral-900 text-neutral-400 mt-20">
+    <footer className={`w-full border-t mt-20 transition-colors ${
+      isDark
+        ? 'bg-neutral-950 border-neutral-900 text-neutral-400'
+        : 'bg-slate-100 border-slate-200 text-slate-600'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Brand Col */}

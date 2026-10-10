@@ -62,47 +62,49 @@ export const NewsView: React.FC<NewsViewProps> = ({
       {featured && (
         <div
           onClick={() => onSelectArticle(featured.slug)}
-          className="group relative rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition-all cursor-pointer shadow-xl"
+          className="group relative rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all cursor-pointer shadow-sm dark:shadow-xl hover:shadow-md"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-            <div className="lg:col-span-7 relative aspect-[16/10] lg:aspect-[16/11] bg-neutral-950 overflow-hidden">
+            <div className="lg:col-span-7 relative aspect-[16/10] lg:aspect-[16/11] bg-neutral-100 dark:bg-neutral-950 overflow-hidden">
               <SafeImage
                 src={featured.coverImage}
                 alt={featured.title}
                 fallbackTheme={featured.fallbackTheme}
                 className="w-full h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-neutral-950 via-neutral-950/20 to-transparent pointer-events-none" />
+              <div className="hidden dark:block absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-neutral-950 via-neutral-950/20 to-transparent pointer-events-none" />
             </div>
 
-            <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between">
+            <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between bg-white dark:bg-neutral-900">
               <div>
-                <div className="flex items-center gap-2 text-xs font-mono font-medium text-rose-400 mb-3">
+                <div className="flex items-center gap-2 text-xs font-mono font-medium text-rose-500 dark:text-rose-400 mb-3">
                   <span>{featured.category}</span>
-                  <span aria-hidden="true" className="text-neutral-600">·</span>
-                  <span>Featured Report</span>
+                  <span aria-hidden="true" className="text-neutral-400 dark:text-neutral-600">·</span>
+                  <span className="px-2 py-0.5 rounded bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800/60 text-rose-600 dark:text-rose-400 text-[10px]">
+                    Featured Report
+                  </span>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-rose-200 transition-colors font-display tracking-tight mb-4 [text-wrap:balance]">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-200 transition-colors font-display tracking-tight mb-4 [text-wrap:balance]">
                   {featured.title}
                 </h2>
 
-                <p className="text-sm text-neutral-400 line-clamp-3 leading-relaxed mb-6">
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-3 leading-relaxed mb-6 font-sans">
                   {featured.excerpt}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-neutral-800 flex items-center justify-between text-xs text-neutral-400">
+              <div className="pt-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
                 <div className="flex items-center gap-2">
                   <img
                     src={featured.author.avatar}
                     alt={featured.author.name}
-                    className="w-6 h-6 rounded-full object-cover"
+                    className="w-6 h-6 rounded-full object-cover border border-neutral-200 dark:border-neutral-700"
                   />
                   <span>By {featured.author.name}</span>
                 </div>
                 <div className="flex items-center gap-1.5 font-mono">
-                  <Clock className="w-3.5 h-3.5 text-neutral-500" />
+                  <Clock className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500" />
                   <span>{featured.readTime}</span>
                 </div>
               </div>

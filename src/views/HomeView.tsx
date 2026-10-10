@@ -57,18 +57,18 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
       {/* SECTION 3 & 4 — LATEST NEWS & TRENDING NOW (Editorial Two-Column Layout) */}
       <section aria-label="Latest Stories and Trending" className="space-y-8">
-        <div className="flex items-center justify-between pb-4 border-b border-neutral-800">
+        <div className="flex items-center justify-between pb-4 border-b border-neutral-200 dark:border-neutral-800">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white font-display tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display tracking-tight">
               Latest Stories
             </h2>
-            <p className="text-xs sm:text-sm text-neutral-400 mt-1">
+            <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-1">
               Fresh reporting from our correspondents across PlayStation, PC, Xbox, and Nintendo.
             </p>
           </div>
           <button
             onClick={() => onNavigate('/news')}
-            className="flex items-center gap-1.5 text-xs font-semibold text-rose-400 hover:text-rose-300 transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 text-xs font-semibold text-rose-600 dark:text-rose-400 hover:text-rose-700 dark:hover:text-rose-300 transition-colors cursor-pointer"
           >
             <span>View All News</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -109,10 +109,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </div>
             )}
 
-            <div className="mt-8 pt-6 border-t border-neutral-800/80 flex justify-center">
+            <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-800/80 flex justify-center">
               <button
                 onClick={() => onNavigate('/news')}
-                className="px-6 py-2.5 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-200 hover:text-white hover:bg-neutral-800 text-xs font-semibold font-mono tracking-wider transition-colors cursor-pointer"
+                className="px-6 py-2.5 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-200 hover:text-neutral-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-neutral-800 text-xs font-semibold font-mono tracking-wider transition-colors cursor-pointer shadow-xs dark:shadow-none"
               >
                 Explore Full Dispatch Archives ({ARTICLES.length} Stories)
               </button>

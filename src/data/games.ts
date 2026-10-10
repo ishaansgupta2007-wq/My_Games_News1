@@ -145,10 +145,25 @@ export const GAMES: GameProfile[] = [
     releaseDate: 'August 20, 2024',
     platforms: ['PlayStation 5', 'PC'],
     genre: 'Action RPG',
-    coverImage: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
-    bannerImage: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
+    coverImage: '/images/black-myth-wukong.jpg',
+    bannerImage: '/images/black-myth-wukong.jpg',
     description: 'Rooted in Chinese mythology and adapted from Journey to the West, you set out as the Destined One to venture into the challenges and marvels ahead to uncover the obscured truth beneath the veil of a glorious legend.',
     metaScore: 82,
     officialSite: 'https://www.heishenhua.com/'
+  },
+  {
+    id: 'game-star-wars-outlaws',
+    slug: 'star-wars-outlaws',
+    title: 'Star Wars Outlaws',
+    developer: 'Massive Entertainment',
+    publisher: 'Ubisoft',
+    releaseDate: 'August 30, 2024',
+    platforms: ['PlayStation 5', 'Xbox Series X|S', 'PC'],
+    genre: 'Open-World Action Adventure',
+    coverImage: '/images/star-wars-outlaws.jpg',
+    bannerImage: '/images/star-wars-outlaws.jpg',
+    description: 'Experience the first-ever open world Star Wars game. Play as scoundrel Kay Vess and companion Nix, seeking freedom and the means to start a new life while navigating criminal syndicates across the galaxy.',
+    metaScore: 76,
+    officialSite: 'https://www.ubisoft.com/en-us/game/star-wars/outlaws'
   }
 ];

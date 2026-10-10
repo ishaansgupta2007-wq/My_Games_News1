@@ -34,6 +34,7 @@ export const HeroArticle: React.FC<HeroArticleProps> = ({
     <div className="space-y-4">
       {/* Primary Hero Stage */}
       <article
+        data-hero-scrim="true"
         onClick={() => onSelect(currentStory.slug)}
         className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-950 border border-neutral-800/90 cursor-pointer shadow-2xl transition-all duration-300 hover:border-neutral-700/80"
       >
@@ -171,11 +172,11 @@ export const HeroArticle: React.FC<HeroArticleProps> = ({
                 onClick={() => setCurrentIndex(idx)}
                 className={`flex items-center gap-3 p-2.5 rounded-xl text-left border transition-all cursor-pointer ${
                   isActive
-                    ? 'bg-neutral-900 border-rose-500/60 shadow-lg'
-                    : 'bg-neutral-950/60 border-neutral-800/80 hover:bg-neutral-900/60 hover:border-neutral-700'
+                    ? 'bg-white dark:bg-neutral-900 border-rose-500 shadow-md text-neutral-900 dark:text-white'
+                    : 'bg-white/90 dark:bg-neutral-950/60 border-neutral-200 dark:border-neutral-800/80 hover:bg-slate-50 dark:hover:bg-neutral-900/60 hover:border-neutral-300 dark:hover:border-neutral-700 text-neutral-700 dark:text-neutral-300'
                 }`}
               >
-                <div className="relative w-14 h-12 rounded-lg overflow-hidden shrink-0 bg-neutral-900 border border-neutral-800">
+                <div className="relative w-14 h-12 rounded-lg overflow-hidden shrink-0 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800">
                   <SafeImage
                     src={st.coverImage}
                     alt={st.title}
@@ -187,12 +188,12 @@ export const HeroArticle: React.FC<HeroArticleProps> = ({
                   )}
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-1.5 text-[10px] font-mono text-neutral-400 uppercase tracking-wider mb-0.5">
-                    <span className={isActive ? 'text-rose-400 font-semibold' : ''}>
+                  <div className="flex items-center gap-1.5 text-[10px] font-mono text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-0.5">
+                    <span className={isActive ? 'text-rose-600 dark:text-rose-500 font-semibold' : ''}>
                       {idx === 0 ? 'Lead Story' : `Feature ${idx + 1}`}
                     </span>
                   </div>
-                  <h4 className="text-xs font-semibold text-white line-clamp-1 truncate">
+                  <h4 className="text-xs font-semibold text-neutral-900 dark:text-neutral-100 line-clamp-1 truncate">
                     {st.title.split('—')[0].split(':')[0]}
                   </h4>
                 </div>

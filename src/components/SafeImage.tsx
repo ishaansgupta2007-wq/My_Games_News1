@@ -134,7 +134,7 @@ export const SafeImage: React.FC<SafeImageProps> = ({
   };
 
   return (
-    <div className={`relative overflow-hidden bg-neutral-900 ${className}`}>
+    <div className={`relative overflow-hidden bg-neutral-100 dark:bg-neutral-900 ${className}`}>
       {!error && (
         <img
           src={src}

@@ -34,7 +34,24 @@ export default function App() {
     return '/';
   });
 
-  const [isDark, setIsDark] = useState<boolean>(true);
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('gamepulse_theme');
+      if (saved) return saved === 'dark';
+      return true;
+    }
+    return true;
+  });
+
+  const toggleTheme = () => {
+    setIsDark((prev) => {
+      const next = !prev;
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('gamepulse_theme', next ? 'dark' : 'light');
+      }
+      return next;
+    });
+  };
 
   // Sync with browser URL changes (popstate)
   useEffect(() => {
@@ -254,7 +271,7 @@ export default function App() {
         currentPath={currentPath}
         onNavigate={navigate}
         isDark={isDark}
-        onToggleTheme={() => setIsDark(!isDark)}
+        onToggleTheme={toggleTheme}
       />
 
       {/* Main View Container */}
@@ -263,7 +280,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <Footer onNavigate={navigate} />
+      <Footer onNavigate={navigate} isDark={isDark} />
 
       {/* Back to top helper */}
       <BackToTop />

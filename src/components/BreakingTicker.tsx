@@ -24,9 +24,9 @@ export const BreakingTicker: React.FC<BreakingTickerProps> = ({ articles, onSele
           <div
             key={art.id}
             onClick={() => onSelect(art.slug)}
-            className="group flex gap-3 p-3 rounded-xl bg-neutral-900/70 border border-neutral-800/80 hover:border-neutral-700 hover:bg-neutral-900 transition-all cursor-pointer"
+            className="group flex gap-3 p-3 rounded-xl bg-white dark:bg-neutral-900/70 border border-neutral-200 dark:border-neutral-800/80 hover:border-neutral-300 dark:hover:border-neutral-700 hover:bg-slate-50 dark:hover:bg-neutral-900 transition-all cursor-pointer shadow-2xs dark:shadow-none"
           >
-            <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden shrink-0 bg-neutral-950">
+            <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden shrink-0 bg-neutral-100 dark:bg-neutral-950">
               <SafeImage
                 src={art.coverImage}
                 alt={art.title}
@@ -36,19 +36,19 @@ export const BreakingTicker: React.FC<BreakingTickerProps> = ({ articles, onSele
             </div>
             <div className="flex flex-col justify-between py-0.5 min-w-0">
               <div>
-                <div className="flex items-center gap-2 text-[11px] font-mono font-medium text-rose-400 mb-1">
+                <div className="flex items-center gap-2 text-[11px] font-mono font-medium text-rose-500 dark:text-rose-400 mb-1">
                   <span>{art.category}</span>
-                  <span aria-hidden="true" className="text-neutral-600">·</span>
-                  <span className="text-neutral-400 flex items-center gap-1">
+                  <span aria-hidden="true" className="text-neutral-400 dark:text-neutral-600">·</span>
+                  <span className="text-neutral-500 dark:text-neutral-400 flex items-center gap-1">
                     <Clock className="w-2.5 h-2.5" />
                     {art.publishedAt}
                   </span>
                 </div>
-                <h3 className="text-xs sm:text-sm font-semibold text-neutral-100 group-hover:text-rose-300 transition-colors line-clamp-2 leading-snug font-display">
+                <h3 className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-rose-600 dark:group-hover:text-rose-300 transition-colors line-clamp-2 leading-snug font-display">
                   {art.title}
                 </h3>
               </div>
-              <span className="text-[11px] text-neutral-500 group-hover:text-neutral-400 transition-colors">
+              <span className="text-[11px] text-neutral-500 group-hover:text-neutral-700 dark:group-hover:text-neutral-400 transition-colors">
                 By {art.author?.name || 'Staff Writer'}
               </span>
             </div>

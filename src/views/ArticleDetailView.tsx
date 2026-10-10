@@ -131,8 +131,8 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
       </header>
 
       {/* Hero Image Showcase */}
-      <div className="mb-12 rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-2xl">
-        <div className="relative aspect-[16/9] w-full bg-neutral-950">
+      <div className="mb-12 rounded-2xl overflow-hidden bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-md dark:shadow-2xl">
+        <div className="relative aspect-[16/9] w-full bg-neutral-100 dark:bg-neutral-950">
           <SafeImage
             src={article.coverImage}
             alt={article.title}
@@ -141,7 +141,7 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
             className="w-full h-full"
           />
         </div>
-        <div className="p-3 bg-neutral-950/80 border-t border-neutral-800/80 text-xs text-neutral-400 font-mono flex items-center justify-between">
+        <div className="p-3 bg-neutral-50 dark:bg-neutral-950/80 border-t border-neutral-200 dark:border-neutral-800/80 text-xs text-neutral-600 dark:text-neutral-400 font-mono flex items-center justify-between">
           <span className="italic">Visual coverage via GamePulse Media Archives</span>
           <ShareButtons title={article.title} />
         </div>
@@ -152,7 +152,7 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
         {/* Left Prose Column */}
         <div className="lg:col-span-8 max-w-prose">
           {/* Opening Lead Paragraph with Editorial Drop Cap */}
-          <div className="text-lg sm:text-xl text-neutral-200 leading-relaxed font-serif mb-8 border-b border-neutral-800/60 pb-8 first-letter:text-5xl first-letter:font-serif first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-rose-500">
+          <div className="text-lg sm:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed font-serif mb-8 border-b border-neutral-200 dark:border-neutral-800/60 pb-8 first-letter:text-5xl first-letter:font-serif first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-rose-500">
             {article.content.intro}
           </div>
 
@@ -160,12 +160,12 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
           <div className="space-y-12">
             {article.content.sections.map((section) => (
               <section key={section.id} id={section.id} className="scroll-mt-24 space-y-5">
-                <h2 className="text-2xl sm:text-3xl font-bold text-white font-display tracking-tight border-b border-neutral-800/60 pb-2">
+                <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display tracking-tight border-b border-neutral-200 dark:border-neutral-800/60 pb-2">
                   {section.heading}
                 </h2>
 
                 {section.paragraphs.map((para, pIdx) => (
-                  <p key={pIdx} className="text-base text-neutral-300 leading-relaxed font-sans">
+                  <p key={pIdx} className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-sans">
                     {para}
                   </p>
                 ))}
@@ -173,11 +173,11 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
                 {/* SubSections with H3 tags */}
                 {section.subSections && section.subSections.map((sub, sIdx) => (
                   <div key={sIdx} className="space-y-3 pt-3">
-                    <h3 className="text-xl sm:text-2xl font-bold text-neutral-100 font-display tracking-tight text-rose-300/95">
+                    <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-neutral-100 font-display tracking-tight text-rose-600 dark:text-rose-300/95">
                       {sub.subHeading}
                     </h3>
                     {sub.paragraphs.map((subPara, spIdx) => (
-                      <p key={spIdx} className="text-base text-neutral-300 leading-relaxed font-sans">
+                      <p key={spIdx} className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-sans">
                         {subPara}
                       </p>
                     ))}
@@ -186,12 +186,12 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
 
                 {/* Pull Quote */}
                 {section.quote && (
-                  <blockquote className="my-8 p-6 sm:p-8 rounded-xl bg-neutral-900/60 border-l-4 border-rose-500 text-neutral-100 font-serif italic text-lg sm:text-xl leading-snug">
+                  <blockquote className="my-8 p-6 sm:p-8 rounded-xl bg-rose-50/60 dark:bg-neutral-900/60 border-l-4 border-rose-500 text-neutral-800 dark:text-neutral-100 font-serif italic text-lg sm:text-xl leading-snug">
                     <p className="mb-3">"{section.quote.text}"</p>
-                    <footer className="text-xs font-mono not-italic uppercase tracking-wider text-rose-400">
+                    <footer className="text-xs font-mono not-italic uppercase tracking-wider text-rose-600 dark:text-rose-400">
                       — {section.quote.author}
                       {section.quote.role && (
-                        <span className="text-neutral-400 font-normal">, {section.quote.role}</span>
+                        <span className="text-neutral-500 dark:text-neutral-400 font-normal">, {section.quote.role}</span>
                       )}
                     </footer>
                   </blockquote>
@@ -199,21 +199,21 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
 
                 {/* Callout box */}
                 {section.callout && (
-                  <div className="my-6 p-4 rounded-xl bg-neutral-900 border border-neutral-800 flex items-start gap-3 text-xs sm:text-sm">
+                  <div className="my-6 p-4 rounded-xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 flex items-start gap-3 text-xs sm:text-sm">
                     {section.callout.type === 'tip' && (
-                      <CheckCircle className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5" />
                     )}
                     {section.callout.type === 'warning' && (
-                      <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                      <AlertTriangle className="w-5 h-5 text-amber-500 dark:text-amber-400 shrink-0 mt-0.5" />
                     )}
                     {section.callout.type === 'info' && (
-                      <Info className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
+                      <Info className="w-5 h-5 text-sky-500 dark:text-sky-400 shrink-0 mt-0.5" />
                     )}
                     <div>
-                      <strong className="text-white block font-display mb-1 text-sm">
+                      <strong className="text-neutral-900 dark:text-white block font-display mb-1 text-sm">
                         {section.callout.title}
                       </strong>
-                      <p className="text-neutral-300 leading-relaxed">{section.callout.text}</p>
+                      <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">{section.callout.text}</p>
                     </div>
                   </div>
                 )}
@@ -221,24 +221,24 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
             ))}
 
             {/* Embedded Video Placeholder */}
-            <div className="my-10 rounded-xl overflow-hidden bg-neutral-950 border border-neutral-800 p-8 text-center relative group">
+            <div className="my-10 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 p-8 text-center relative group">
               <div className="max-w-md mx-auto space-y-3">
-                <div className="w-14 h-14 mx-auto rounded-full bg-rose-600/20 border border-rose-500/40 flex items-center justify-center text-rose-400 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 mx-auto rounded-full bg-rose-600/10 dark:bg-rose-600/20 border border-rose-500/30 dark:border-rose-500/40 flex items-center justify-center text-rose-600 dark:text-rose-400 group-hover:scale-110 transition-transform">
                   <Play className="w-6 h-6 fill-rose-500 ml-0.5" />
                 </div>
-                <h4 className="text-base font-bold text-white font-display">
+                <h4 className="text-base font-bold text-neutral-900 dark:text-white font-display">
                   Watch: Technical Breakdown & Gameplay Commentary
                 </h4>
-                <p className="text-xs text-neutral-400">
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">
                   4K 60FPS uncompressed capture recorded on PS5 Pro / PC test bench.
                 </p>
               </div>
             </div>
 
             {/* Conclusion */}
-            <div className="pt-8 border-t border-neutral-800/80 space-y-4">
-              <h3 className="text-xl font-bold text-white font-display">The Verdict & Forward Outlook</h3>
-              <p className="text-base text-neutral-300 leading-relaxed font-sans">
+            <div className="pt-8 border-t border-neutral-200 dark:border-neutral-800/80 space-y-4">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">The Verdict & Forward Outlook</h3>
+              <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-sans">
                 {article.content.conclusion}
               </p>
             </div>
