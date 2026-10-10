@@ -41,7 +41,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
             {article.excerpt}
           </p>
           <div className="flex items-center justify-between text-xs text-neutral-400 pt-3 border-t border-neutral-800/80 font-mono">
-            <span>By {article.author.name}</span>
+            <span>By {article.author?.name || 'Staff Writer'}</span>
             <span>{article.readTime}</span>
           </div>
         </div>
@@ -78,7 +78,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
             </p>
           </div>
           <div className="flex items-center justify-between text-xs text-neutral-500 pt-3 border-t border-neutral-800/60 mt-3 font-mono">
-            <span>By {article.author.name}</span>
+            <span>By {article.author?.name || 'Staff Writer'}</span>
             <span>{article.publishedAt}</span>
           </div>
         </div>
@@ -125,13 +125,15 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
         {/* Card Byline Footer */}
         <div className="flex items-center justify-between pt-3 border-t border-neutral-800/80 text-xs text-neutral-400">
           <div className="flex items-center gap-2">
-            <img
-              src={article.author.avatar}
-              alt={article.author.name}
-              className="w-5 h-5 rounded-full object-cover border border-neutral-700"
-            />
+            {article.author?.avatar && (
+              <img
+                src={article.author.avatar}
+                alt={article.author.name}
+                className="w-5 h-5 rounded-full object-cover border border-neutral-700"
+              />
+            )}
             <span className="truncate max-w-[130px] font-medium text-neutral-300">
-              {article.author.name}
+              {article.author?.name || 'Staff Writer'}
             </span>
           </div>
           <span className="text-neutral-500 font-mono text-[11px] flex items-center gap-1">

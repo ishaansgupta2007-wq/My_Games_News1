@@ -122,13 +122,15 @@ export const HeroArticle: React.FC<HeroArticleProps> = ({
             {/* Author Byline & CTA */}
             <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-neutral-800/80">
               <div className="flex items-center gap-3">
-                <img
-                  src={currentStory.author.avatar}
-                  alt={currentStory.author.name}
-                  className="w-10 h-10 rounded-full object-cover border-2 border-neutral-800 shadow-md"
-                />
+                {currentStory.author?.avatar && (
+                  <img
+                    src={currentStory.author.avatar}
+                    alt={currentStory.author.name}
+                    className="w-10 h-10 rounded-full object-cover border-2 border-neutral-800 shadow-md"
+                  />
+                )}
                 <div className="text-xs">
-                  <span className="font-semibold text-white block">By {currentStory.author.name}</span>
+                  <span className="font-semibold text-white block">By {currentStory.author?.name || 'Staff Writer'}</span>
                   <div className="flex items-center gap-2 text-neutral-400 mt-0.5 font-mono text-[11px]">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-3 h-3 text-neutral-500" />

@@ -122,7 +122,7 @@ export const SearchView: React.FC<SearchViewProps> = ({
         {/* Popular Quick Searches */}
         <div className="flex flex-wrap items-center justify-center gap-2 pt-1 text-xs">
           <span className="text-neutral-500 font-mono text-[11px]">Popular Searches:</span>
-          {['Ghost of Yotei', 'Elden Ring', 'GTA 6', 'RTX 5090', 'Switch 2', 'DualSense', 'God of War'].map(
+          {['Ghost of Yotei', 'Elden Ring', 'GTA 6', 'RTX 5090', 'Tomb Raider', 'DualSense', 'God of War'].map(
             (term) => (
               <button
                 key={term}

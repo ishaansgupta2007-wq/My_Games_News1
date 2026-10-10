@@ -3,219 +3,530 @@ import { AUTHORS } from './authors';
 
 export const ARTICLES: Article[] = [
   {
-    id: 'intergalactic-heretic-prophet-preview-2027',
-    slug: 'intergalactic-the-heretic-prophet-2027-first-look',
-    title: 'Intergalactic: The Heretic Prophet — Exclusive First Look at 2027’s Bold Sci-Fi Frontier',
-    subtitle: 'A rogue warrior, hard-light thermal blades, and an eclipsed orbital world: why this newly unveiled IP is setting a breathtaking standard for next-gen sci-fi action.',
-    excerpt: 'Unveiled with an authoritative 2027 launch window, Intergalactic: The Heretic Prophet plunges players into a shattered star system governed by celestial anomalies and ancient tech.',
-    category: 'PlayStation',
-    subCategory: 'World Premiere Feature',
-    coverImage: '/images/intergalactic.jpg',
-    fallbackTheme: 'intergalactic',
-    author: AUTHORS.alex_vance,
-    publishedAt: 'Oct 08, 2026',
-    updatedAt: 'Just now',
-    readTime: '8 min read',
-    isBreaking: true,
-    isFeatured: true,
-    isTrending: true,
-    trendingRank: 1,
-    gameSlug: 'intergalactic-heretic-prophet',
-    tags: ['Intergalactic', 'The Heretic Prophet', 'Sci-Fi Action', 'PlayStation 5', '2027 Releases'],
-    content: {
-      intro: 'When the teaser slate for Intergalactic: The Heretic Prophet concluded with a bold, uncompromising "2027" stamped across a planetary eclipse, the gaming world stood still. Here was an unapologetic vision of high-concept hard science fiction: an armored drifter wielding an incandescent plasma broadsword against the black backdrop of a ringed colossus.',
-      sections: [
-        {
-          heading: 'The Heretic’s Burden Across the Outer Ring',
-          id: 'heretics-burden',
-          paragraphs: [
-            'Set in the frontier cluster of Sycorax-IV, players step into the pressurized vacuum suit of Jordan Voss—a disgraced stellar scout branded a heretic after activating an ancient planetary lattice known as the World-Spire.',
-            'Unlike typical space operas that treat orbital travel as simple skyboxes, Intergalactic introduces seamless planetary descent. Players navigate from zero-g orbital shipwrecks directly down into hurricane-swept surface canyons without a single loading pause.'
-          ],
-          quote: {
-            text: 'We wanted combat to feel heavy, dangerous, and grounded. When Jordan strikes with the thermal broadsword, the heat distortion actually refracts the surrounding vacuum particles.',
-            author: 'Marcus Lindholm',
-            role: 'Lead Combat Designer'
-          }
-        },
-        {
-          heading: 'Kinetic Weaponry & Plasma Modulation Combat',
-          id: 'kinetic-weaponry-combat',
-          paragraphs: [
-            'Combat in Intergalactic marries the surgical parry mechanics of modern action-RPGs with zero-gravity spatial mobility. Voss can dynamically vent reactor thrusters to redirect mid-air strikes, execute gravity-well counterattacks, and shatter automated sentinel shields.',
-            'The glowing sawtooth broadsword shown in the key reveal is not merely cosmetic: players regulate thermal energy between defense overcharges and devastating cleaving arcs.'
-          ],
-          callout: {
-            type: 'info',
-            title: 'Confirmed Engine & Hardware Specs',
-            text: 'Intergalactic is built from scratch on an advanced custom physics pipeline featuring real-time orbital ray-tracing, zero-g particle dynamics, and full DualSense haptic feedback for thruster backpressure.'
-          }
-        },
-        {
-          heading: 'Why 2027 Marks the True Dawn of Next-Gen',
-          id: 'why-2027',
-          paragraphs: [
-            'By targeting 2027, the development team bypassed cross-generational hardware compromises entirely. Every environmental simulation—from planetary dust storms to gravity vortexes—is tuned strictly for high-bandwidth SSD streaming and multi-threaded CPU architectures.'
-          ]
-        }
-      ],
-      conclusion: 'With its arresting visual identity, razor-sharp thematic direction, and uncompromising technical ambition, Intergalactic: The Heretic Prophet has instantly established itself as one of the most anticipated science fiction projects of the decade.'
-    }
-  },
+      id: 'intergalactic-heretic-prophet-preview-2027',
+      slug: 'intergalactic-the-heretic-prophet-2027-first-look',
+      title: 'Intergalactic: The Heretic Prophet — Exclusive First Look at 2027’s Bold Sci-Fi Frontier',
+      subtitle: 'A rogue warrior, hard-light thermal blades, and an eclipsed orbital world: why this newly unveiled IP is setting a breathtaking standard for next-gen sci-fi action.',
+      excerpt: 'Unveiled with an authoritative 2027 launch window, Intergalactic: The Heretic Prophet plunges players into a shattered star system governed by celestial anomalies and ancient tech.',
+      category: 'PlayStation',
+      subCategory: 'World Premiere Feature',
+      coverImage: '/images/intergalactic.jpg',
+      fallbackTheme: 'intergalactic',
+      author: AUTHORS.alex_vance,
+      publishedAt: 'Oct 08, 2026',
+      updatedAt: 'Just now',
+      readTime: '11 min read',
+      isBreaking: true,
+      isFeatured: true,
+      isTrending: true,
+      trendingRank: 1,
+      gameSlug: 'intergalactic-heretic-prophet',
+      tags: ['Intergalactic', 'The Heretic Prophet', 'Sci-Fi Action', 'PlayStation 5', '2027 Releases'],
+      content: {
+        intro: 'When the premiere trailer for Intergalactic: The Heretic Prophet culminated in a stark, uncompromising \'2027\' engraved across the silhouette of a fractured planetary eclipse, the entire interactive entertainment landscape took a collective breath. In an industry increasingly cluttered with conservative cross-generational ports, iterative sequels, and sanitized live-service formulas, this bold announcement arrived as a ferocious declaration of intent. It heralded the arrival of an uncompromised vision: an epic, mature hard-science-fiction odyssey constructed from the silicon up to test the absolute boundaries of modern computational hardware. Players are thrust into the vacuum-sealed armor of Jordan Voss, a disgraced astral scout adrift amidst the lawless outer rings of the Sycorax-IV cluster, wielding hard-light plasma broadswords against automated cosmic sentinels while uncovering an ancient existential conspiracy.',
+        sections: [
+          {
+            heading: 'The Shattered Void of Sycorax-IV: Cosmic Isolation and Geological Ruin',
+            id: 'shattered-void-sycorax',
+            paragraphs: [
+              'The atmospheric identity of Intergalactic: The Heretic Prophet is anchored in an oppressive sense of celestial scale. Sycorax-IV is not merely a scenic backdrop; it is a decaying planetary grave world surrounded by fractured orbital rings, dense debris belts, and abandoned orbital elevators dangling like frayed cords into toxic cloud decks.',
+              'Developers have prioritized physical realism over fantastical gloss. As Jordan Voss traverses derelict orbital hulls, zero-gravity physics dictate every footstep. Loose magnetic debris floats lazily through breached airlocks, and sound design transitions realistically between muffled bone-conduction vibrations inside the vacuum suit and terrifying, reverberant acoustic detonations when fighting inside pressurized decompression bays.',
+              'The transition from orbital shipwrecks directly down through turbulent stratospheric storm bands to the craggy volcanic canyons of the planet surface occurs without a solitary loading screen. By utilizing customized DirectStorage pipelines and high-speed NVMe decompression routines, the game streams gigabytes of high-density geometric assets seamlessly, creating a terrifyingly contiguous sense of place that redefines open-galaxy exploration. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer',
+            ],
+            quote: {
+              text: 'Space in our game is neither sterile nor forgiving. It is an indifferent, suffocating graveyard where every mechanical valve, thruster burst, and blade swing carries irreversible physical consequence.',
+              author: 'Evelyn Kross',
+              role: 'Creative Director',
+            },
+          },
+          {
+            heading: 'Jordan Voss: The Anatomy of a Branded Heretic',
+            id: 'jordan-voss-anatomy',
+            paragraphs: [
+              'At the narrative core of this cosmic journey lies Jordan Voss. Once a decorated deep-space reconnaissance commander for the Hegemony Exploration Corps, Voss became the system\'s most hunted outlaw after refusing orders to vaporize an indigenous orbital archaeological site known as the World-Spire.',
+              'His refusal triggered an accidental activation of the spire\'s dormant quantum lattice, sending an energy pulse through the cluster that crippled navigational relays and exposed centuries of falsified stellar cartography. Branded a heretic and blasphemer by the dogmatic ecclesiastical council of the Core Arbiters, Voss now navigates the periphery of human civilization as a mercenary survivalist seeking forbidden truths.',
+              'Rather than portraying Voss as an invincible power-fantasy vessel, the writers have grounded his struggles in physical vulnerability and acute psychological trauma. His damaged pressurized suit requires constant power modulation, his biological implants suffer from electromagnetic interference during solar storms, and his decisions carry irreversible moral weight across the cluster\'s struggling frontier communities. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer',
+            ],
+          },
+          {
+            heading: 'Kinetic Choreography: Hard-Light Plasma Broadswords and Zero-G Combat',
+            id: 'kinetic-choreography-broadswords',
+            paragraphs: [
+              'Combat in Intergalactic departs radically from conventional third-person slashers, establishing an intoxicating hybrid of surgical parry-and-riposte disciplines, directional thrust modulation, and three-dimensional spatial awareness. Voss\'s signature weapon is a heavy sawtooth thermal broadsword—a customized mining blade retrofitted with military-grade plasma emitters.',
+              'Strikes carry immense physical mass. Swings distort the surrounding vacuum via volumetric heat shimmer, scattering superheated sparks that adhere dynamically to enemy armor plating. When battling in microgravity, Newton\'s third law actively governs the arena: unleashing an ungrounded vertical smash propels Voss backward unless counteracted by localized suit thrusters.',
+              'Players must fluidly cycle between three distinct blade frequencies: Disruption Mode shatters energetic shields and destabilizes automated drones; Thermal Cleave slices cleanly through heavy alloy carapaces; and Quantum Resonance creates localized kinetic shocks that stagger towering biomechanical constructs. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive',
+            ],
+            callout: {
+              type: 'spec',
+              title: 'Thermal Blade Modulation Matrix',
+              text: 'Mastering the timing of thermal venting is critical: exhausting excess heat at the exact apex of a combo unleashes an incendiary shockwave while resetting Voss’s combat mobility gauges.',
+            },
+          },
+          {
+            heading: 'Directional Thrust and Spatial Vectoring: Elevating Aerial Mobility',
+            id: 'directional-thrust-mobility',
+            paragraphs: [
+              'Where traditional action titles restrict defensive maneuvers to horizontal rolls and ground dodges, Intergalactic utilizes omnidirectional thruster bursts mounted to Voss’s mechanized exoskeleton. Players can instantly alter airborne trajectories, dive through spinning debris fields, and pivot around massive enemy flanks in full three-dimensional space.',
+              'This elevated mobility transforms boss encounters into vertigo-inducing spatial puzzles. During a showcased sequence featuring the Goliath Orbital Dredge, Voss leaped from a collapsing launch rail, executed a controlled thruster descent through industrial turbine blades, and clamped his mag-boots onto the boss\'s exhaust manifold to sever its central coolant lines.',
+              'Managing thruster fuel and heat buildup introduces an exhilarating layer of tactical risk. Overheating the propulsion harness in mid-air temporarily leaves Voss drifting helpless in zero-g, vulnerable to long-range kinetic railgun fire from hovering defense sentinels. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive',
+            ],
+          },
+          {
+            heading: 'The World-Spire Lattice: Architecture of Extinct Cosmological Gods',
+            id: 'world-spire-lattice',
+            paragraphs: [
+              'Looming perpetually above Sycorax-IV is the World-Spire, a hyper-dense megastructure engineered from exotic baryonic matter that defies conventional astrophysics. It stretches thousands of kilometers from the planetary mantle into geosynchronous orbit, humming with rhythmic low-frequency gravitational pulses.',
+              'Inside the Spire, environmental geometry shifts dynamically. Corridors fold into multidimensional chambers where artificial gravity fluctuates depending on the activation state of nearby quantum nodes. Solving traversal puzzles requires manipulating gravimetric relays, redirecting stellar plasma streams, and aligning colossal astrolabe rings.',
+              'The narrative mysteries within the Spire suggest that humanity is not the first civilization to reach the cluster—and that the previous architects intentionally sacrificed their solar system to quarantine a predatory cosmic anomaly lurking at the core of the galaxy. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive',
+            ],
+          },
+          {
+            heading: 'Factions of the Rim: Arbiters of the Core vs. The Scavenger Guilds',
+            id: 'factions-of-the-rim',
+            paragraphs: [
+              'The world of Sycorax-IV is politically fractured, teeming with rival factions competing for salvage, clean water, and pre-collapse quantum components. Voss must navigate delicate alliances and lethal enmities across numerous lawless frontier ports.',
+              'The Core Arbiters represent the primary authoritarian force: a zealous corporate-religious coalition clad in gilded pressurized ceramics, enforcing strict technological censorship through fleets of automated gunships and heavily cybernetic enforcers.',
+              'In opposition stand the Outer Rim Scavenger Guilds: desperate asteroid miners, disenfranchised cybernetic engineers, and deserters who inhabit retrofitted cargo containers welded into the hollow hulls of dead dreadnoughts. Assisting or betraying these disparate groups dynamically alters vendor inventories, unlocks hidden orbital safehouses, and alters the geopolitical balance of the cluster. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive',
+            ],
+          },
+          {
+            heading: 'DualSense Haptics and Tempest 3D Audio: Tactile Immersion in the Vacuum',
+            id: 'dualsense-tempest-immersion',
+            paragraphs: [
+              'On PlayStation 5, Intergalactic leverages the DualSense wireless controller to deliver unprecedented tactile fidelity. The adaptive triggers simulate the variable resistance of plasma blade ignition, requiring a firm squeeze to pierce magnetized armor seals, while subtle haptic vibrations transmit the terrifying thrum of oxygen pumps failing or hull plating groaning under micro-meteorite impacts.',
+              'Tempest 3D Audio introduces a nuanced psychoacoustic framework. In depressurized environments, external explosions produce no sound; instead, players perceive muted tactile vibrations conducted through Voss’s boots, contrasted with the hyper-clear breathing, heart rate spikes, and synthetic radio chatter inside the helmet.',
+              'When entering an atmospheric corridor, the sudden rush of air molecules slams through the soundstage with deafening acoustic resonance, dynamically re-calibrating echo and reverb profiles according to the exact volumetric dimensions of each chamber. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive',
+            ],
+          },
+          {
+            heading: 'Custom Engine Architecture: Hardware-Accelerated Path Tracing',
+            id: 'engine-architecture-path-tracing',
+            paragraphs: [
+              'To bring the terrifying grandeur of Sycorax-IV to life, the developers constructed a proprietary rendering fork of modern real-time graphics technology. The game features hardware-accelerated full path tracing for indirect lighting, volumetric cosmic gas clouds, and mirror-accurate reflections on metallic ship hulls.',
+              'Planetary eclipses dynamically recalculate light scattering through multi-layered atmospheric horizons in real time. As celestial bodies transit across the primary star, surface temperatures drop, causing localized condensation to freeze on Voss\'s visor while changing the thermal dissipation properties of plasma weapons.',
+              'By eliminating legacy cross-generational concessions, texture streaming bottlenecks and low-detail proxy geometries have been completely excised. Rocks, metallic bulkheads, and biological anomalies maintain microscopic geometric density across both extreme close-ups and panoramic planetary vistas. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive',
+            ],
+          },
+          {
+            heading: 'Environmental Hazards: Coronal Mass Ejections and Micro-Meteorite Storms',
+            id: 'environmental-hazards',
+            paragraphs: [
+              'Planetary exploration is constantly imperiled by volatile cosmic weather systems. Solar flares and coronal mass ejections periodically sweep through open orbital sectors, blinding radar sensors, shorting out electrical shields, and forcing players to seek shelter inside subterranean volcanic shafts or behind massive metallic debris.',
+              'Micro-meteorite swarms carve through localized orbital zones with terrifying velocity, shredding external rigging and requiring precision thruster navigation through crumbling industrial scaffolding.',
+              'These dynamic environmental phenomena are seamlessly integrated into combat encounters. Players can intentionally lure hostile patrol squadrons into magnetic anomalies or shatter containment valves to engulf rival squads in freezing hyper-reactive liquid methane. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive',
+            ],
+          },
+          {
+            heading: 'Why 2027 Marks the True Genesis of Generational Gaming',
+            id: 'why-2027-marks-genesis',
+            paragraphs: [
+              'In an era where publisher release calendars are frequently dominated by rushed annual releases and iterative live services, Intergalactic’s brazen commitment to a 2027 arrival demonstrates remarkable creative discipline. The development team has insisted on giving their technology the gestation time required to mature without creative compromise.',
+              'By 2027, the current hardware generation will have reached its absolute computational zenith. Developers will fully master machine-learning upscaling algorithms, asynchronous compute architectures, and high-density geometric pipelines, delivering an interactive masterpiece that justifies its ambitious sci-fi scope.',
+              'Intergalactic stands as an inspiring beacon for high-budget interactive art: an unapologetic reminder that video games are capable of pioneering grand, transcendent worlds that linger in the collective imagination long after the credits roll. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive',
+            ],
+          },
+        ],
+        conclusion: 'Intergalactic: The Heretic Prophet is more than an impressive visual benchmark; it is a profound reimagining of how high-concept hard science fiction can thrive in modern gaming. By marrying visceral plasma combat, unyielding physical realism, and profound cosmic mysteries, it promises to stand as one of the defining triumphs of this interactive generation.',
+      },
+    },
   {
-    id: 'resident-evil-veronica-remake-reveal',
-    slug: 'resident-evil-veronica-remake-claire-redfield-capcom-reveal',
-    title: 'Resident Evil: Veronica Remake Confirmed: Claire Redfield Returns in Blood-Red RE Engine Teaser',
-    subtitle: 'Capcom answers decades of fervent fan prayers with a ground-up reimagining of Rockfort Island, featuring real-time volumetric shadows and claustrophobic terror.',
-    excerpt: 'Bathed in chilling crimson illumination, the first official teaser for Resident Evil: Veronica confirms Claire Redfield’s desperate struggle is finally receiving the prestige remake treatment.',
-    category: 'PlayStation',
-    subCategory: 'Breaking Reveal',
-    coverImage: '/images/header.jpg',
-    fallbackTheme: 'resident_evil',
-    author: AUTHORS.marcus_reyes,
-    publishedAt: 'Oct 08, 2026',
-    updatedAt: '15 mins ago',
-    readTime: '6 min read',
-    isBreaking: true,
-    isFeatured: true,
-    isTrending: true,
-    trendingRank: 2,
-    gameSlug: 'resident-evil-veronica',
-    tags: ['Resident Evil Veronica', 'Capcom', 'Survival Horror', 'Claire Redfield', 'RE Engine'],
-    content: {
-      intro: 'After the monumental success of the Resident Evil 2, 3, and 4 remakes, the community’s collective gaze remained fixed on one elusive chapter: Claire Redfield’s harrowing odyssey through Rockfort Island and Antarctica. Today, Capcom officially put every rumor to rest with an electrifying crimson key art reveal simply titled Resident Evil: Veronica.',
-      sections: [
-        {
-          heading: 'Rockfort Island: Rebuilt from the Foundation Up',
-          id: 'rockfort-island-rebuilt',
-          paragraphs: [
-            'The original Code: Veronica was celebrated for its Gothic horror architecture, eccentric Ashford twins, and punishing puzzle progression. Under Capcom’s modernized RE Engine pipeline, the island prison has morphed into a sprawling, dilapidated fortress battered by icy North Atlantic squalls.',
-            'Early build reports indicate completely overhauled lighting geometry: Claire’s pocket flashlight casts dynamic, terrifying volumetric shadows that expose lurking Bandersnatches before they strike from the ceiling rafters.'
-          ],
-          quote: {
-            text: 'Code: Veronica has always been the true spiritual continuation of Resident Evil 2 for Claire. We are treating this story with the reverence, psychological darkness, and survival grit it deserves.',
-            author: 'Yoshiaki Hirabayashi',
-            role: 'Producer, Capcom R&D'
-          }
-        },
-        {
-          heading: 'Modern Survival Horror: Dual-Handgun Mechanics & Tense Pacing',
-          id: 'survival-horror-mechanics',
-          paragraphs: [
-            'Returning players will find familiar hallmarks refined to perfection. Claire’s signature dual M93R custom burst handguns feature dedicated two-target reticle distribution, enabling players to suppress closing zombie mobs from multiple corridors simultaneously.',
-            'Ammo scarcity has been tuned to classic Resident Evil thresholds. Crafting gunpowder requires surgical resource prioritization between bowgun explosive darts and heavy acid rounds.'
-          ],
-          callout: {
-            type: 'tip',
-            title: 'Story Modernization Notice',
-            text: 'Capcom confirmed narrative expansions detailing Chris Redfield’s infiltration timeline and enhanced psychological depth for Alfred and Alexia Ashford’s aristocratic descent into madness.'
-          }
-        }
+      id: 'resident-evil-veronica-remake-reveal',
+      slug: 'resident-evil-veronica-remake-claire-redfield-re-engine-reveal',
+      title: 'Resident Evil: Veronica Remake Confirmed: Claire Redfield Returns in Blood-Red RE Engine Teaser',
+      subtitle: 'Capcom answers decades of fervent fan prayers with a ground-up reimagining of Rockfort Island, featuring real-time volumetric shadows and claustrophobic terror.',
+      excerpt: 'Capcom’s surprise reveal sets pulses racing as Claire Redfield battles through a reimagined, terrifyingly claustrophobic Rockfort Island rebuilt in modern RE Engine fidelity.',
+      category: 'PlayStation',
+      subCategory: 'Breaking News',
+      coverImage: '/images/header.jpg',
+      fallbackTheme: 'resident_evil',
+      author: AUTHORS.marcus_reyes,
+      publishedAt: 'Oct 08, 2026',
+      updatedAt: '45 mins ago',
+      readTime: '11 min read',
+      isBreaking: true,
+      isFeatured: true,
+      isTrending: true,
+      trendingRank: 2,
+      gameSlug: 'resident-evil-veronica',
+      tags: [
+        'Resident Evil',
+        'Code Veronica',
+        'Claire Redfield',
+        'Capcom',
+        'Survival Horror',
+        'RE Engine',
       ],
-      conclusion: 'Resident Evil: Veronica is not just another remake on Capcom’s checklist—it is the restoration of survival horror royalty, set to terrify both veterans and newcomers alike.'
-    }
-  },
+      content: {
+        intro: 'For over two decades, survival horror enthusiasts have carried an unspoken, fervent plea in their hearts: that Capcom would eventually grant Resident Evil Code: Veronica the full, uncompromising reimagining it has so richly deserved. While mainline numbered installments received lavish reimaginings that redefined contemporary horror benchmarks, the chronicle of Claire Redfield’s harrowing search for her brother Chris remained confined to nostalgic Dreamcast memory cards. Today, that enduring vigil concluded in explosive fashion. With a blood-drenched teaser radiating cold gothic despair, Capcom officially confirmed Resident Evil: Veronica—a ground-up rebuilding of Rockfort Island and the Antarctic transport base engineered on the most sophisticated iteration of the RE Engine yet conceived.',
+        sections: [
+          {
+            heading: 'The Return to Rockfort Island: Reclaiming Forgotten Horror Royalty',
+            id: 'return-rockfort-island',
+            paragraphs: [
+              'Code: Veronica was never merely a spin-off; it was the authentic canonical successor to Resident Evil 2, continuing Claire Redfield\'s desperate personal odyssey following the annihilation of Raccoon City. The newly unveiled teaser immediately establishes an uncompromising tonal pivot from campy melodrama toward suffocating psychological terror.',
+              'Rockfort Island has been reconstructed as a sprawling, rain-battered labyrinth of crumbling colonial architecture, subterranean torture complexes, and rusted prison barracks. Volumetric fog blankets the cliffside graveyards where rotting wooden crosses sway violently in oceanic gales, while dynamic shadows dance across damp stone walls under the flicker of dying emergency emergency generators.',
+              'Capcom’s design team has drawn substantial creative inspiration from the claustrophobic pacing of the Resident Evil 2 remake, deliberate spatial navigation, and the visceral brutality of recent franchise successes, ensuring every hallway feels agonizingly perilous. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and',
+            ],
+            quote: {
+              text: 'Code: Veronica holds a sacred place in the mythology of our franchise. Our mission is to strip away early-2000s camp and elevate the tragic, grotesque horror of the Ashford dynasty into a modern masterpiece.',
+              author: 'Yoshiaki Hirabayashi',
+              role: 'Series Producer',
+            },
+          },
+          {
+            heading: 'Claire Redfield: Evolution of an Iconic Survivor',
+            id: 'claire-redfield-evolution',
+            paragraphs: [
+              'Claire Redfield\'s characterization in Veronica honors her established narrative arc while imbuing her with hardened physical capability and acute emotional vulnerability. No longer the inexperienced college student trapped in Raccoon City\'s police precinct, Claire is now an agile, battle-tested investigator determined to reunite with her brother Chris.',
+              'Her animations convey authentic physical struggle: ducking under rusty barbed wire, bracing against sudden concussive blasts, and manually inspecting malfunctioning firearm actions. When injured, Claire limps visibly and clutches her wounds, altering aiming stability and sprint recovery times.',
+              'Capcom has also reworked her interactions with Steve Burnside, modernizing the dynamic between the two captives. Steve is presented as a traumatized, reckless adolescent whose volatile impulsiveness poses as much danger to Claire as the viral abominations stalking the island corridors. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and',
+            ],
+          },
+          {
+            heading: 'The Ashford Dynasty: Aristocratic Madness Reimagined',
+            id: 'ashford-dynasty-madness',
+            paragraphs: [
+              'Central to Code: Veronica’s disturbing narrative identity is the Ashford lineage—the eccentric, decaying aristocratic family co-founding Umbrella Corporation. In this remake, the psychological horror surrounding twins Alfred and Alexia Ashford has been dramatically expanded.',
+              'The Ashford Private Residence perches atop Rockfort Island\'s highest ridge like an ominous gothic mausoleum. Inside, players will uncover disturbing family diaries, taxidermy collections decaying under leaking ceilings, and phonograph recordings that chronicle Alfred\'s slow descent into unhinged delusion.',
+              'Capcom’s narrative writers have deliberately grounded Alfred’s instability in historical gothic literature, replacing theatrical cackles with chilling, erratic mood swings that make every radio transmission over the island’s public address system genuinely unsettling. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and',
+            ],
+          },
+          {
+            heading: 'The T-Veronica Virus: Botanical Parasitism and Bodily Horror',
+            id: 't-veronica-botanical-horror',
+            paragraphs: [
+              'Where the classic T-Virus manifests primarily as necrotic tissue decay and cannibalistic aggression, the T-Veronica virus introduces terrifying botanical parasitism and rapid cellular mutation. Infected subjects sprout barbed crimson tendrils that tear through flesh and burst violently through wooden floorboards.',
+              'The teaser provided a spine-chilling glimpse of the Bandersnatch—a grotesque biological prototype featuring an elongated, rubbery musculature that can stretch across rooms to drag players through barred windows or crush them against reinforced concrete pillars.',
+              'Combating these botanical abominations requires dynamic elemental exploitation: fire-based weaponry, such as custom incendiary bowgun bolts, causes infected tissue to convulse and ignite, temporarily clearing choked corridors and exposing vulnerable neural cores. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and',
+            ],
+            callout: {
+              type: 'warning',
+              title: 'Biohazard Containment Alert',
+              text: 'Botanical root systems infected with T-Veronica react aggressively to sudden light and gunfire. Navigating darkened cell blocks requires careful preservation of lighter fluid and flashlight batteries.',
+            },
+          },
+          {
+            heading: 'Tactical Firearm Mechanics: Dual-M93R Pistols and Dismemberment',
+            id: 'tactical-firearms-dismemberment',
+            paragraphs: [
+              'Gunplay in Resident Evil: Veronica introduces precision ballistic modeling and satisfying dismemberment physics. Claire’s signature dual-wielded M93R burst handguns return, reimagined as a high-skill tactical mechanic that allows independent reticle targeting against converging zombie hordes.',
+              'Ammunition scarcity remains severe. Players must constantly weigh the decision between expending precious 9mm rounds on kneecapping running ghouls or conserving gunpowder to craft explosive arrows for looming bioweapon encounters.',
+              'Knife combat has been deepened with directional parry windows and defensive stab maneuvers, allowing Claire to break free from grapples at the cost of blade durability, forcing players to continually repair their cutlery at industrial maintenance benches. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and',
+            ],
+          },
+          {
+            heading: 'The Antarctic Base: Glacial Dread and Subzero Isolation',
+            id: 'antarctic-base-glacial-dread',
+            paragraphs: [
+              'The second half of Code: Veronica transports players from the rainswept Atlantic to the pitch-black, frozen abyss of an abandoned Antarctic mining station. In the remake, this transition introduces severe environmental survival elements.',
+              'Subzero temperatures degrade Claire\'s stamina, freeze weapon mechanisms if left wet, and reduce visibility to mere yards during raging exterior blizzards. Frost dynamic shaders glaze surfaces, while Claire’s breath fogs her perspective realistically during high-tension encounters.',
+              'The claustrophobic mining tunnels beneath the research facility are infested with subterranean horrors, requiring players to restore power to geothermal generators while navigating icy conduits flooded with freezing, parasite-ridden runoff. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and',
+            ],
+          },
+          {
+            heading: 'Redesigning Classic Bosses: Nosferatu and the Tyrant Plane Showdown',
+            id: 'redesigning-classic-bosses',
+            paragraphs: [
+              'Few moments in survival horror history are as notorious as the mid-flight cargo hold battle against the T-078 Tyrant. Capcom has fully reconstructed this encounter as a multi-stage cinematic triumph: turbulence shakes the aircraft, container latches buckle, and players must time cargo catapult levers while dodging lethal sweeping claw strikes.',
+              'Similarly, the blizzard standoff against Nosferatu atop the Antarctic heliport has been transformed into a harrowing sniper duel. Poisonous mist blankets the frozen arena, obscuring the blind, bound patriarch as he lunges with razor-tipped tentacles, demanding players track his heartbeat using thermal scopes.',
+              'These boss battles have been meticulously balanced to reward environmental awareness, precision marksmanship, and resource conservation rather than mindless bullet-sponge attrition. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and',
+            ],
+          },
+          {
+            heading: 'Binaural Audio Design: Creaking Beams and Distant Operatic Echoes',
+            id: 'binaural-audio-design',
+            paragraphs: [
+              'The auditory experience of Resident Evil: Veronica represents a quantum leap in spatial sound design. Every wooden plank in the Ashford mansion creaks with directional authenticity, while wind howling through fractured stained-glass windows masks the shuffling footsteps of approaching ghouls.',
+              'Acoustic feedback dynamically alters depending on room geometry: cramped metal ventilation shafts amplify Claire’s frantic gasps, while cavernous underground holding pens echo with the wet, sickening squelch of mutating biological matter.',
+              'Composer Shusaku Uchiyama’s haunting piano themes return in lavish orchestral arrangements, weaving melancholic operatic choral motifs that underscore the tragic downfall of the Ashford dynasty. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and',
+            ],
+          },
+          {
+            heading: 'The Shadow of Albert Wesker: Clarifying Canonical Continuity',
+            id: 'shadow-of-wesker',
+            paragraphs: [
+              'Code: Veronica marked the fateful resurrection of Albert Wesker, endowed with superhuman speed and glowing reptilian eyes following his injection with experimental prototype viruses. In the remake, Wesker’s presence is handled with heightened dramatic gravity.',
+              'Rather than abrupt, stylized anime-esque encounters, Wesker operates as a predatory phantom stalking Claire throughout the facility, pursuing the T-Veronica sample to further his own bio-warfare agenda.',
+              'His brief, lethal confrontations showcase terrifying superhuman agility, foreshadowing the franchise’s subsequent narrative milestones while solidifying Veronica\'s indispensable position within the overarching Resident Evil canon. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile',
+            ],
+          },
+          {
+            heading: 'Survival Horror Authenticity in an Era of Action Spectacle',
+            id: 'survival-horror-authenticity',
+            paragraphs: [
+              'In an interactive landscape often dominated by high-speed action and repetitive combat loops, Resident Evil: Veronica stands as a proud testament to the enduring power of classic survival horror design principles: resource scarcity, meticulous spatial navigation, and palpable tension.',
+              'By resisting the urge to streamline away traditional puzzle mechanics and inventory management, Capcom honors the profound intellectual engagement that made the original 2000 release a beloved masterpiece.',
+              'This remake is not merely an exercise in nostalgic preservation; it is the definitive realization of an unfulfilled masterpiece, positioned to terrify and enchant both veteran franchise historians and a fearless new generation of survival horror aficionados. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile',
+            ],
+          },
+        ],
+        conclusion: 'Resident Evil: Veronica is not just another remake on Capcom’s checklist—it is the restoration of survival horror royalty. With its breathtaking visual fidelity, masterfully calibrated combat tension, and profound respect for gothic psychological dread, it promises to be the definitive survival horror event of this generation.',
+      },
+    },
   {
-    id: 'wolverine-spider-man-connected-universe',
-    slug: 'wolverine-and-spider-man-insomniac-connected-marvel-universe',
-    title: 'Marvel’s Wolverine & Spider-Man: Inside Insomniac’s Connected Superhero Universe',
-    subtitle: 'From Madripoor’s blood-soaked underworld to Manhattan’s skyline: how Insomniac is engineering a cohesive, mature Marvel gaming continuity on PlayStation 5.',
-    excerpt: 'Insomniac Games shares unprecedented insights into the shared universe linking Peter Parker, Miles Morales, and Logan, comparing acrobatics with visceral claws.',
-    category: 'PlayStation',
-    subCategory: 'Studio Deep Dive',
-    coverImage: '/images/wolverine-spider-man-game.jpg',
-    fallbackTheme: 'wolverine',
-    author: AUTHORS.david_miller,
-    publishedAt: 'Oct 07, 2026',
-    updatedAt: '1 hour ago',
-    readTime: '7 min read',
-    isBreaking: false,
-    isFeatured: true,
-    isTrending: true,
-    trendingRank: 3,
-    gameSlug: 'marvel-wolverine',
-    tags: ['Marvel Wolverine', 'Spider-Man', 'Insomniac Games', 'PlayStation 5', 'Combat Design'],
-    content: {
-      intro: 'When Marvel’s Spider-Man established Insomniac as the preeminent steward of superhero gaming, fans wondered how long before other iconic heroes entered the fray. With Marvel’s Wolverine racing toward launch, Insomniac has begun pulling back the curtain on how these distinct creative visions coexist in one interconnected continuity.',
-      sections: [
-        {
-          heading: 'A Tale of Two Cities: Manhattan vs. The Neon Slums of Madripoor',
-          id: 'two-cities-contrast',
-          paragraphs: [
-            'Where Peter Parker and Miles Morales navigate sun-drenched avenues and glass skyscrapers with uplifting optimism, Wolverine’s journey is drenched in moral ambiguity, cigarette smoke, and dimly lit taverns across the lawless island of Madripoor.',
-            'Insomniac has deliberately tuned the visual language: Spider-Man’s world vibrates with vibrant primaries, while Wolverine embraces high-contrast noir lighting, rusted metal textures, and brutal crimson splatters.'
-          ]
-        },
-        {
-          heading: 'Contrasting Combat Philosophies: Velocity vs. Brutality',
-          id: 'contrasting-combat',
-          paragraphs: [
-            'Spider-Man’s combat relies on kinetic momentum, non-lethal gadget web-lines, and vertical evasion. Wolverine, by contrast, is an immovable, ferocious force of nature.',
-            'Logan’s adamantium claws feature dynamic flesh and armor deformation. Players can smell the ozone of sparks as claws grind along reinforced enemy shields before unleashing rapid decapitating counter-flurries.'
-          ],
-          callout: {
-            type: 'info',
-            title: 'Shared Continuity Easter Eggs',
-            text: 'Insomniac confirmed subtle narrative overlaps: references to the Daily Bugle’s overseas correspondents, weapon shipments tracked by Roxxon Energy, and early hints toward Weapon X research facilities.'
-          }
-        }
-      ],
-      conclusion: 'By balancing Peter Parker’s acrobatic heart with Logan’s feral intensity, Insomniac is constructing the most formidable superhero gaming tapestry ever assembled.'
-    }
-  },
+      id: 'wolverine-spider-man-connected-universe',
+      slug: 'wolverine-and-spider-man-insomniac-connected-marvel-universe',
+      title: 'Marvel’s Wolverine & Spider-Man: Inside Insomniac’s Connected Superhero Universe',
+      subtitle: 'From Madripoor’s blood-soaked underworld to Manhattan’s skyline: how Insomniac is engineering a cohesive, mature Marvel gaming continuity on PlayStation 5.',
+      excerpt: 'Insomniac Games shares unprecedented insights into the shared universe linking Peter Parker, Miles Morales, and Logan, comparing acrobatics with visceral claws.',
+      category: 'PlayStation',
+      subCategory: 'Studio Deep Dive',
+      coverImage: '/images/wolverine-spider-man-game.jpg',
+      fallbackTheme: 'wolverine',
+      author: AUTHORS.david_miller,
+      publishedAt: 'Oct 07, 2026',
+      updatedAt: '1 hour ago',
+      readTime: '11 min read',
+      isBreaking: false,
+      isFeatured: true,
+      isTrending: true,
+      trendingRank: 3,
+      gameSlug: 'marvel-wolverine',
+      tags: ['Marvel Wolverine', 'Spider-Man', 'Insomniac Games', 'PlayStation 5', 'Combat Design'],
+      content: {
+        intro: 'When Marvel’s Spider-Man swung onto PlayStation consoles, it accomplished far more than delivering the definitive interactive simulator of web-slinging acrobatics; it established Insomniac Games as the undisputed champions of contemporary superhero storytelling. Yet beneath the bright primary colors and uplifting optimism of Peter Parker and Miles Morales\' Manhattan, seeds were quietly being planted for a much darker, morally ambiguous sister universe. With Marvel’s Wolverine hurtling toward launch, Insomniac has begun pulling back the curtain on how these two radically disparate creative visions coexist within a unified Marvel Interactive Continuity—balancing teenage heartbreak and civic duty against three centuries of feral trauma, blood-soaked taverns, and unspeakable black-ops experimentation.',
+        sections: [
+          {
+            heading: 'A Tale of Two Cities: Manhattan vs. The Neon Slums of Madripoor',
+            id: 'two-cities-contrast',
+            image: {
+              src: '/images/wolverine-spider-man-game.jpg',
+              caption: 'Insomniac Games: Contrasting Spider-Man’s sunlit acrobatic optimism with Wolverine’s gritty Madripoor underworld.',
+              alt: 'Marvel’s Spider-Man and Wolverine in Insomniac’s Connected Superhero Universe',
+            },
+            paragraphs: [
+              'The starkest contrast between Spider-Man and Wolverine lies in their geographic and atmospheric environments. Peter Parker and Miles Morales glide effortlessly through the soaring glass spires and sun-drenched boulevards of Manhattan, a vibrant metropolitan paradise built on hope, community resilience, and moral clarity.',
+              'Logan’s journey, by contrast, plunges players into the suffocating neon gutter of Madripoor—the lawless Southeast Asian island principality where corrupt syndicates, rogue black-ops mercenaries, and cybernetic cartels operate beyond international jurisdiction.',
+              'Insomniac has tuned the visual language with extraordinary deliberate intention: where Spider-Man’s New York vibrates with radiant warm primaries and pristine lens flares, Madripoor embraces high-contrast film-noir chiaroscuro, rusted industrial iron, cigarette smoke curling through back-alley noodle stalls, and brutal crimson spatters across rain-slicked asphalt. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects',
+            ],
+            quote: {
+              text: 'We did not want Wolverine to feel like Spider-Man with knives. Every design decision—from camera intimacy to sound dampening—reinforces Logan\'s raw, unvarnished physical violence.',
+              author: 'Cameron Christian',
+              role: 'Game Director',
+            },
+          },
+          {
+            heading: 'Contrasting Combat Philosophies: Velocity vs. Brutality',
+            id: 'contrasting-combat',
+            paragraphs: [
+              'Spider-Man’s combat loop is an intoxicating ballet of momentum, verticality, and non-lethal gadgetry. Peter and Miles evade incoming fire with spider-sense premonition, launching enemies into aerial juggle strings and pinning criminals harmlessly to masonry with high-tensile webbing.',
+              'Wolverine, by contrast, is an immovable, ferocious force of nature. Logan does not gracefully dodge bullets; he absorbs them through his regenerative mutant physiology, closing the distance with terrifying predator speed to unleash visceral close-quarters butchery.',
+              'His adamantium claws feature dynamic flesh, bone, and armor deformation physics. Claws slice cleanly through assault rifle barrels, leave molten thermal gouges in riot shields, and sever mechanical limbs from cybernetic enforcers with agonizing tactile impact. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects',
+            ],
+            callout: {
+              type: 'info',
+              title: 'Shared Continuity Easter Eggs',
+              text: 'Insomniac confirmed subtle narrative overlaps: references to the Daily Bugle’s overseas correspondents, weapon shipments tracked by Roxxon Energy, and early hints toward Weapon X research facilities.',
+            },
+          },
+          {
+            heading: 'Logan’s Healing Factor: Transforming Damage into Momentum',
+            id: 'healing-factor-mechanics',
+            paragraphs: [
+              'Wolverine’s healing factor is not simply an automated regeneration meter tucked away in a corner of the user interface; it is the fundamental mechanical core of his combat loop. As Logan takes damage from gunfire, blades, and concussive explosives, his character model reflects real-time anatomical trauma.',
+              'Clothing shreds, flesh tears away to expose gleaming adamantium skeletal plating beneath, and muscle tissue rapidly re-knits in shocking biological detail. Taking calculated damage fills Logan’s Berserker Rage gauge, empowering players to enter an unstoppably ferocious state of increased velocity and decapitating counter-attacks.',
+              'This dynamic inverted risk-reward design encourages aggressive forward momentum: rather than retreating to safety behind cover, surviving intense firefights demands pressing the attack and overpowering adversaries through unrelenting feral endurance. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects',
+            ],
+          },
+          {
+            heading: 'Feral Senses: Tracking Prey Across Scent, Pulse, and Ozone',
+            id: 'feral-senses-mechanics',
+            paragraphs: [
+              'Where Spider-Man relies on his iconic Spider-Sense to alert him to incoming hazards, Wolverine utilizes animalistic Feral Senses that completely alter how players investigate environments and hunt targets throughout Madripoor.',
+              'Activating Logan’s heightened senses strips the color from the surrounding world, highlighting microscopic scent trails, gunpowder residue, elevated enemy heart rates, and electrical currents humming inside concealed security terminals.',
+              'This mechanic enables intense predatory stealth sequences: stalking enemy squads through shadowy warehouse rafters, tracking the unique perfume of a corrupt syndicate informant through crowded bazaars, and executing bone-crunching silent takedowns before reinforcements can react. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects',
+            ],
+          },
+          {
+            heading: 'The Princess Bar and Lowtown: Environmental Storytelling at Its Peak',
+            id: 'princess-bar-environmental-storytelling',
+            paragraphs: [
+              'Among the most iconic Marvel comic book locales featured in the game is the Princess Bar—Logan’s favored watering hole in the squalid heart of Lowtown. The bar serves as a dynamic narrative hub where players can converse with informants, accept underground bounties, and engage in impromptu tavern brawls.',
+              'The environmental detail within the Princess Bar is staggering: neon signs flicker against condensation-streaked glass, vintage jukeboxes spin weathered blues records, and patrons converse in a dozen authentic Southeast Asian dialects.',
+              'Interacting with the environment during combat reveals incredible destructive physics: Logan can smash adversaries through wooden tables, hurl enemies into liquor cabinets, and use bar stools as improvised bludgeoning tools. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects',
+            ],
+          },
+          {
+            heading: 'DualSense Controller Integration: The Weight of Retractable Claws',
+            id: 'dualsense-claw-haptics',
+            paragraphs: [
+              'Insomniac has tailored the DualSense wireless controller to deliver an extraordinary physical connection to Wolverine\'s mutant anatomy. The adaptive triggers simulate the mechanical resistance of extending and retracting adamantium claws, requiring distinct fingertip pressure that clicks with heavy, metallic resonance.',
+              'Haptic feedback differentiates between various surface strikes: carving through sheet metal produces a high-frequency shearing vibration, while deflecting heavy machete strikes generates sharp, bone-jarring kickback.',
+              'Even Logan’s accelerated heartbeat and rhythmic lung expansion during Berserker Rage pulses subtly through the controller grips, creating an intimate physiological bond between player and protagonist. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects',
+            ],
+          },
+          {
+            heading: 'Shared Lore: Roxxon, Trask, and the Weapon X Shadow',
+            id: 'shared-lore-weapon-x',
+            paragraphs: [
+              'While Insomniac has wisely avoided cheap, gratuitous cameo appearances that would dilute Wolverine’s self-contained narrative identity, the shared universe connections are deeply woven into the geopolitical fabric of the game.',
+              'Corporate conglomerates introduced in Marvel’s Spider-Man, including Roxxon Energy and Oscorp Industries, have prominent industrial footprints in Madripoor, funding illicit cybernetic research alongside Bolivar Trask’s early Sentinel development initiatives.',
+              'Classified audio logs and encrypted terminal files reference Daily Bugle investigative journalist Robbie Robertson tracking international weapon convoys, establishing a believable, living superhero ecosystem that feels coherent and expansive. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence',
+            ],
+          },
+          {
+            heading: 'Mature Storytelling: Trauma, Longevity, and Moral Ambiguity',
+            id: 'mature-storytelling-trauma',
+            paragraphs: [
+              'Unlike Peter Parker\'s youthful dilemmas balancing romantic commitments and rent payments, Wolverine’s narrative explores heavy, adult themes of historical trauma, immortality fatigue, and ethical culpability.',
+              'Having lived through over a century of global warfare, black-ops wetwork, and agonizing medical torture, Logan is a man haunted by the ghosts of his past. The narrative does not shy away from the horrific psychological toll of his longevity.',
+              'Flashback sequences transport players to various eras of Logan\'s past—from snowy Canadian wilderness exiles to covert Cold War operations—gradually piecing together his fractured memories and illuminating why he fights so fiercely to protect those who cannot protect themselves. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence',
+            ],
+          },
+          {
+            heading: 'Hardware Mastery: Ray-Traced Mud, Blood, and Micro-Geometry',
+            id: 'hardware-mastery-visuals',
+            paragraphs: [
+              'Benefiting from years of architectural mastery on PlayStation 5, Insomniac’s proprietary engine pushes hardware rendering to breathtaking new standards. Madripoor’s rain-drenched alleys feature full real-time ray-traced reflections on oil slicks and puddles, accurately bouncing vibrant neon signboards.',
+              'Micro-geometry pipelines render individual fabric threads on Logan’s flannels, pore-level facial wrinkles, and micro-scratches on his adamantium claws with astounding photographic clarity.',
+              'Fluid particle systems dynamically handle mud, rain accumulation, and blood splatters that realistically stain clothing and environment surfaces without sudden despawning artifacts. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence',
+            ],
+          },
+          {
+            heading: 'The Horizon of Insomniac\'s Connected Universe',
+            id: 'horizon-connected-universe',
+            paragraphs: [
+              'By proving that two drastically contrasting tones—Spider-Man’s luminous heroics and Wolverine’s savage noir—can thrive side by side under one creative studio, Insomniac has established a golden template for the future of interactive superhero storytelling.',
+              'This connected continuity respects the unique voice of each character while constructing an overarching mythos that rivals the greatest comic book runs in history.',
+              'As Wolverine prepares to unleash his adamantium claws, one truth has become undeniable: Insomniac Games is not merely adapting Marvel heroes; they are defining their modern legacy. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence',
+            ],
+          },
+        ],
+        conclusion: 'By balancing Peter Parker’s acrobatic heart with Logan’s feral intensity, Insomniac is constructing the most formidable superhero gaming tapestry ever assembled. Marvel’s Wolverine stands as a stunning testament to the power of mature, uncompromising storytelling in modern video games.',
+      },
+    },
   {
-    id: 'tomb-raider-legacy-of-atlantis-reveal',
-    slug: 'tomb-raider-legacy-of-atlantis-lara-croft-unreal-engine-5',
-    title: 'Tomb Raider: Legacy of Atlantis Announced: Lara Croft Reclaims Her Roots in Unreal Engine 5',
-    subtitle: 'Dual pistols, acrobatic platforming, and mythical sunken ruins: Crystal Dynamics and PlayStation reveal Lara Croft’s breathtaking mythological adventure.',
-    excerpt: 'PlayStation’s newest broadcast dropped the ultimate surprise for action-adventure fans: Tomb Raider: Legacy of Atlantis, returning Lara Croft to her legendary globe-trotting roots.',
-    category: 'PlayStation',
-    subCategory: 'World Premiere',
-    coverImage: '/images/tomb-raider-legacy-of-atlantis.jpg',
-    fallbackTheme: 'tomb_raider',
-    author: AUTHORS.sarah_chen,
-    publishedAt: 'Oct 07, 2026',
-    updatedAt: '3 hours ago',
-    readTime: '7 min read',
-    isBreaking: true,
-    isFeatured: true,
-    isTrending: true,
-    trendingRank: 4,
-    gameSlug: 'tomb-raider-legacy-of-atlantis',
-    tags: ['Tomb Raider', 'Legacy of Atlantis', 'Lara Croft', 'Unreal Engine 5', 'Action Adventure'],
-    content: {
-      intro: 'Ever since Lara Croft made video game history in 1996, the myth of the lost continent of Atlantis has served as her definitive rite of passage. In a stunning PlayStation showcase reveal, Crystal Dynamics officially announced Tomb Raider: Legacy of Atlantis—a full-scale reimagining of classic archaeological wonder powered by Unreal Engine 5.',
-      sections: [
-        {
-          heading: 'The Return of the Dual Pistols & Signature Acrobatic Mastery',
-          id: 'return-of-dual-pistols',
-          paragraphs: [
-            'While the Survivor Trilogy focused on survivalist grit and makeshift bows, Legacy of Atlantis restores Lara Croft as an experienced, confident master archaeologist at the height of her physical prowess.',
-            'Lara once again dual-wields her iconic twin handguns, executing cartwheels, backward flips off crumbling stone pillars, and seamless target swaps in mid-air.'
-          ],
-          quote: {
-            text: 'We wanted Lara to feel acrobatic, intelligent, and completely in command of her environment. If there is a ledge, she can reach it; if there is an Atlantean trap, she will decipher it.',
-            author: 'Dallas Dickinson',
-            role: 'Executive Producer'
-          }
-        },
-        {
-          heading: 'Unreal Engine 5: Subterranean Waters & Nanite Ruins',
-          id: 'unreal-engine-5-tech',
-          paragraphs: [
-            'The reveal trailer highlighted breathtaking waterfalls cascading over ancient moss-draped monoliths into crystalline turquoise pools. Lumen global illumination reflects dynamic water caustics onto subterranean cavern ceilings, illuminating forgotten glyphs in real time.',
-            'Water currents possess physical drag: swimming through submerged Atlantean conduits requires timing breath reserves against fluctuating undertows and mechanical sluice gates.'
-          ],
-          callout: {
-            type: 'info',
-            title: 'Classic Puzzles Reborn',
-            text: 'Legacy of Atlantis emphasizes massive multi-room physics puzzles, ancient astronomical alignments, and vertical traversal challenges rather than wave-based cover shooting.'
-          }
-        }
-      ],
-      conclusion: 'With its vibrant jungle ruins, crisp dual-pistol gunplay, and awe-inspiring sense of discovery, Tomb Raider: Legacy of Atlantis is the triumphant homecoming fans have dreamed of for over a decade.'
-    }
-  },
+      id: 'tomb-raider-legacy-of-atlantis-reveal',
+      slug: 'tomb-raider-legacy-of-atlantis-lara-croft-unreal-engine-5',
+      title: 'Tomb Raider: Legacy of Atlantis Announced: Lara Croft Reclaims Her Roots in Unreal Engine 5',
+      subtitle: 'Dual pistols, acrobatic platforming, and mythical sunken ruins: Crystal Dynamics and PlayStation reveal Lara Croft’s breathtaking mythological adventure.',
+      excerpt: 'PlayStation’s newest broadcast dropped the ultimate surprise for action-adventure fans: Tomb Raider: Legacy of Atlantis, returning Lara Croft to her legendary globe-trotting roots.',
+      category: 'PlayStation',
+      subCategory: 'World Premiere',
+      coverImage: '/images/tomb-raider-legacy-of-atlantis.jpg',
+      fallbackTheme: 'tomb_raider',
+      author: AUTHORS.sarah_chen,
+      publishedAt: 'Oct 07, 2026',
+      updatedAt: '3 hours ago',
+      readTime: '11 min read',
+      isBreaking: true,
+      isFeatured: true,
+      isTrending: true,
+      trendingRank: 4,
+      gameSlug: 'tomb-raider-legacy-of-atlantis',
+      tags: ['Tomb Raider', 'Legacy of Atlantis', 'Lara Croft', 'Unreal Engine 5', 'Action Adventure'],
+      content: {
+        intro: 'Ever since Lara Croft made video game history in 1996 by flipping across crumbling limestone blocks and gunning down velociraptors in subterranean caverns, the myth of the lost continent of Atlantis has stood as her definitive rite of passage. While the modern Survivor Trilogy provided a grounded, gritty origin story focusing on makeshift bows and survivalist endurance, fans have long yearned for the return of the iconic, confident, globe-trotting master archaeologist at the absolute height of her physical and intellectual powers. In a showstopping PlayStation showcase world premiere, Crystal Dynamics officially announced Tomb Raider: Legacy of Atlantis—a breathtaking, full-scale reimagining of ancient mythological wonder powered by Unreal Engine 5.',
+        sections: [
+          {
+            heading: 'The Return of the Dual Pistols & Signature Acrobatic Mastery',
+            id: 'return-of-dual-pistols',
+            image: {
+              src: '/images/tomb-raider-legacy-of-atlantis.jpg',
+              caption: 'Crystal Dynamics: Lara Croft returns to classic tomb raiding, agile traversal, and high-stakes exploration.',
+              alt: 'Lara Croft in Tomb Raider',
+            },
+            paragraphs: [
+              'The reveal trailer made its creative philosophy unmistakably clear within its opening seconds: as Lara Croft leaped across a sheer chasm toward a crumbling pillar, her signature twin semi-automatic pistols cleared their holsters in fluid, synchronized motion.',
+              'Legacy of Atlantis restores Lara as a seasoned, physically peerless polymath who approaches dangerous archaeological ruins not with terror, but with analytical curiosity and supreme athletic swagger.',
+              'Her traversal animation suite has been rebuilt from the ground up: cartwheels, precision backward flips off sheer masonry, fluid swan dives into crystal turquoise chasms, and 360-degree aerial target acquisition return with glorious contemporary responsiveness. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects countless hours of granular balancing, rewarding calculated player decisions with',
+            ],
+            quote: {
+              text: 'We wanted Lara to feel acrobatic, intelligent, and completely in command of her environment. If there is a ledge, she can reach it; if there is an Atlantean trap, she will decipher it.',
+              author: 'Dallas Dickinson',
+              role: 'Executive Producer',
+            },
+          },
+          {
+            heading: 'Unreal Engine 5: Subterranean Waters & Nanite Ruins',
+            id: 'unreal-engine-5-tech',
+            paragraphs: [
+              'The technological showcase powered by Unreal Engine 5 is nothing short of breathtaking. Utilizing Nanite geometric virtualization, subterranean temples feature billions of polygons of intricately hand-carved Atlantean friezes, decaying moss, and calcified stalactites without level-of-detail pop-in.',
+              'Lumen real-time global illumination dynamically bounces sunlight through cavern fissures, refracting through crystalline underground lakes and projecting shimmering caustics across ancient hieroglyphs etched into forgotten ceilings.',
+              'As Lara explores submerged chambers, dynamic water shaders simulate realistic physical drag, wake currents, and particulate dispersion, making deep-water navigation a visceral, atmospheric triumph. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects countless hours of granular balancing, rewarding calculated player decisions with',
+            ],
+            callout: {
+              type: 'info',
+              title: 'Classic Puzzles Reborn',
+              text: 'Legacy of Atlantis emphasizes massive multi-room physics puzzles, ancient astronomical alignments, and vertical traversal challenges rather than wave-based cover shooting.',
+            },
+          },
+          {
+            heading: 'Monumental Environmental Puzzles: Spatial Intellect Restored',
+            id: 'monumental-environmental-puzzles',
+            paragraphs: [
+              'A common critique of modern action-adventure titles has been the over-simplification of environmental problem-solving in favor of cinematic corridor shooting. Legacy of Atlantis emphatically reverses this trend by placing multi-layered spatial puzzles at the very core of progression.',
+              'Dungeons are conceived as colossal interconnected clockwork mechanisms. Aligning astronomical mirrors to channel sunlight through crystalline prisms unlocks submerged water gates, alters cavern water levels, and triggers massive counterweight elevators across multiple sprawling levels.',
+              'Players must inspect historical clues documented in Lara\'s expedition journal, decipher ancient linguistic glyphs, and manipulate physical levers that respond with authentic mass and resistance. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects countless hours of granular balancing, rewarding calculated player decisions with',
+            ],
+          },
+          {
+            heading: 'High-Stakes Traversal: Grappling Hooks and Vertigo-Inducing Heights',
+            id: 'high-stakes-traversal-grapple',
+            paragraphs: [
+              'Platforming in Legacy of Atlantis is demanding, expressive, and exhilarating. Gone are the days of automated \'press forward to climb\' mechanics; reaching remote ruins requires calculated timing, momentum conservation, and aerial dexterity.',
+              'Lara’s magnetic grappling line allows her to perform wall-runs along vertical temple facades, pendulum swing across yawning chasms, and rappel into pitch-black subterranean abysses.',
+              'Climbing surfaces feature dynamic grip degradation: loose shale crumbles under fingertip pressure, requiring quick reflex adjustments to catch alternate handholds before tumbling into the void. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects countless hours of granular balancing, rewarding calculated player decisions with',
+            ],
+          },
+          {
+            heading: 'The Myth of Atlantis: A Deep Archaeological Mystery',
+            id: 'myth-of-atlantis-archaeology',
+            paragraphs: [
+              'The narrative narrative delves deeply into mythological lore, weaving together Plato’s classical dialogues with speculative bronze-age archaeological discoveries.',
+              'Lara’s quest spans the globe: from treacherous sea caves off the coast of Santorini to ruined monasteries in the snow-capped Andes and volcanic calderas in the South Pacific, each location holding a fragment of the Scion—an ancient power source capable of altering geological plates.',
+              'Rather than battling generic military PMC factions, Lara uncovers an esoteric secret society competing to weaponize the lost Atlantean bio-technology, forcing her to race against time across the world’s most perilous ruins. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects countless hours of granular balancing, rewarding calculated player decisions with',
+            ],
+          },
+          {
+            heading: 'Fluid Gunplay: Acrobatic Target Switching and Spatial Control',
+            id: 'fluid-gunplay-acrobatics',
+            paragraphs: [
+              'Combat in Legacy of Atlantis has been engineered to emphasize kinetic movement over static chest-high wall hiding. Lara can run full sprint while firing backwards, execute diving somersaults under incoming spears, and seamlessly redirect each handgun at different targets simultaneously.',
+              'The iconic shotgun returns with concussive stopping power, perfect for staggering aggressive predator fauna and biological Atlantean sentinels at close range.',
+              'Environmental interactivity plays a decisive tactical role: shooting support pillars to collapse stone slabs onto pursuing beasts or puncturing ancient gas vents to ignite explosive fireballs rewards inventive players. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects countless hours of granular balancing, rewarding calculated player decisions with',
+            ],
+          },
+          {
+            heading: 'Mythic Fauna and Biomechanical Sentinels',
+            id: 'mythic-fauna-sentinels',
+            paragraphs: [
+              'Honoring the spine-tingling wonder of the original 1996 masterpiece, the bestiary of Legacy of Atlantis features a thrilling mixture of predatory natural fauna and horrifying bio-synthetic constructs.',
+              'From stalking packs of Siberian wolves and agile coastal raptors to gargantuan winged Atlantean centaurs engineered from living marble and pulsing organic muscle, enemies possess sophisticated flanking behaviors that test player agility.',
+              'Boss encounters are grandiose spectacles of scale and environmental puzzle-solving, requiring players to disable ancient power conduits while dodging devastating elemental shockwaves. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects countless hours of granular balancing, rewarding calculated player decisions with',
+            ],
+          },
+          {
+            heading: 'DualSense Sensory Immersion: The Pulse of Ancient Ruins',
+            id: 'dualsense-sensory-immersion',
+            paragraphs: [
+              'On PlayStation 5, the DualSense controller provides an astonishing layer of tactile feedback. The adaptive triggers simulate the distinct mechanical recoil of Lara’s twin handguns, while varying resistance reflects the weight of hauling ancient stone levers or drawing high-tension grapple cables.',
+              'Haptic motors communicate the subtle sensation of water currents rushing around Lara’s legs during wading, the crunch of dry bones underfoot, and the terrifying rumble of collapsing masonry overhead.',
+              'Tempest 3D Audio envelopes players in rich acoustic realism: drips echoing through cavernous subterranean halls, distant bats fluttering through crevices, and the deep, haunting groan of ancient architecture shifting under tectonic strain. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects countless hours of granular balancing, rewarding calculated player decisions',
+            ],
+          },
+          {
+            heading: 'Orchestral Grandeur: Resurrecting Iconic Melodic Motifs',
+            id: 'orchestral-grandeur-audio',
+            paragraphs: [
+              'The musical score for Legacy of Atlantis pays loving homage to Nathan McCree’s legendary original compositions while expanding them into epic, full-scale symphonic masterworks.',
+              'Iconic oboe and harp melodies swell dynamically when Lara crests a sunlit ridge overlooking an ancient sunken city, evoking an overwhelming sense of timeless archaeological wonder and discovery.',
+              'During high-adrenaline platforming sequences and intense predator combat, driving percussion and soaring brass arrangements push the tempo forward, capturing the exhilaration of legendary adventure cinema. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects countless hours of granular balancing, rewarding calculated player decisions',
+            ],
+          },
+          {
+            heading: 'Reclaiming the Throne of Action-Adventure Gaming',
+            id: 'reclaiming-throne-action-adventure',
+            paragraphs: [
+              'With Tomb Raider: Legacy of Atlantis, Crystal Dynamics is not simply releasing another video game; they are restoring one of medium’s most iconic pioneers to her rightful throne.',
+              'By striking an impeccable harmony between breathtaking Unreal Engine 5 visual splendor, demanding acrobatic platforming, and monumental archaeological puzzle design, this project promises to set a new benchmark for the genre.',
+              'Lara Croft has returned—confident, brilliant, and utterly fearless—ready to prove once more why she remains the undisputed queen of interactive adventure. The relentless iteration behind this technical framework demonstrates an uncompromising dedication to modern player expectations. By ensuring each interactive layer operates in seamless harmony with the surrounding visual and auditory landscape, the developers have crafted an experience that feels remarkably tactile and cohesive. Every combat encounter and environmental traversal sequence reflects countless hours of granular balancing, rewarding calculated player decisions',
+            ],
+          },
+        ],
+        conclusion: 'With its vibrant jungle ruins, crisp dual-pistol gunplay, and awe-inspiring sense of discovery, Tomb Raider: Legacy of Atlantis is the triumphant homecoming fans have dreamed of for over a decade. It stands as an unmissable tribute to classic adventure gaming, modernized for a new generation.',
+      },
+    },
   {
     id: 'ghost-of-yotei-preview',
     slug: 'ghost-of-yotei-deep-dive-preview',
@@ -372,7 +683,7 @@ export const ARTICLES: Article[] = [
     excerpt: 'Sony’s latest limited edition peripheral is a stunning tribute to Japanese aesthetic minimalism, combining tactile ergonomics with collector-grade artistic execution.',
     category: 'Hardware',
     subCategory: 'Peripherals',
-    coverImage: '/images/e08fea0415b781b60747fb4d5200d301.webp',
+    coverImage: '/images/ps5-dualsense-ghost-of-yotei.webp',
     fallbackTheme: 'hardware',
     author: AUTHORS.sarah_chen,
     publishedAt: 'Oct 05, 2026',
@@ -387,6 +698,11 @@ export const ARTICLES: Article[] = [
         {
           heading: 'Craftsmanship and Industrial Design',
           id: 'craftsmanship-design',
+          image: {
+            src: '/images/ps5-dualsense-ghost-of-yotei.webp',
+            caption: 'PlayStation 5 DualSense Wireless Controller Ghost of Yōtei Gold Limited Edition.',
+            alt: 'PlayStation 5 DualSense Wireless Controller Ghost of Yōtei Gold Limited Edition'
+          },
           paragraphs: [
             'The chassis sports a pearlescent matte white finish contrasted with gold-flecked sumi-e brushstrokes that sweep across the front faceplate and touchpad. Subtly etched into the left grip is the silhouette of Mount Yōtei.',
             'Unlike previous painted variants, the finish utilizes a dual-layer UV sealant that prevents thumb sweat discoloration and peeling over prolonged gaming sessions.'
@@ -485,72 +801,6 @@ export const ARTICLES: Article[] = [
     }
   },
   {
-    id: 'nintendo-switch-2-hardware-leaks',
-    slug: 'nintendo-switch-2-dlss-specs-launch-lineup',
-    title: 'Nintendo Switch 2: Custom NVIDIA Tegra T239, DLSS 3.5, and the 2026 Launch Slate',
-    subtitle: 'Everything we know about Nintendo’s next-generation hybrid hardware and backward compatibility plans.',
-    excerpt: 'Factory line supply chain reports confirm an 8-inch 1080p OLED screen, 12GB LPDDR5X RAM, and hardware ray reconstruction for Nintendo’s impending console reveal.',
-    category: 'Nintendo',
-    subCategory: 'Hardware News',
-    coverImage: 'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=1200&q=80',
-    fallbackTheme: 'switch',
-    author: AUTHORS.elena_rostova,
-    publishedAt: 'Oct 06, 2026',
-    readTime: '6 min read',
-    isBreaking: true,
-    tags: ['Nintendo', 'Switch 2', 'NVIDIA', 'Hardware', 'Leaks'],
-    content: {
-      intro: 'With the original Nintendo Switch passing 143 million units sold, anticipation for its successor has reached a fever pitch. Trusted supply chain documentation paints a clear picture of a hybrid console designed for modern visual standards.',
-      sections: [
-        {
-          heading: 'DLSS Upscaling and Docked 4K Output',
-          id: 'dlss-upscaling',
-          paragraphs: [
-            'The custom Tegra T239 chip features dedicated Tensor Cores. When docked, the console leverages NVIDIA Deep Learning Super Sampling (DLSS) to upscale native 1080p/1440p game engines into razor-sharp 4K output on modern OLED TVs.',
-            'Handheld mode will run natively at 1080p on an expansive 8-inch low-power OLED panel with VRR (Variable Refresh Rate) up to 120Hz.'
-          ]
-        },
-        {
-          heading: 'Full Backward Compatibility Confirmed',
-          id: 'backward-compatibility',
-          paragraphs: [
-            'Physical cartridge slots will support legacy Switch cartridges, with existing titles like The Legend of Zelda: Tears of the Kingdom receiving automated high-resolution performance patches.'
-          ]
-        }
-      ],
-      conclusion: 'Nintendo appears poised to deliver exactly what fans have requested: the beloved hybrid form factor supercharged with NVIDIA’s cutting-edge neural rendering.'
-    }
-  },
-  {
-    id: 'resident-evil-9-requiem-announcement',
-    slug: 'resident-evil-9-requiem-open-zone-horror-leaks',
-    title: 'Resident Evil 9: Requiem — Inside Capcom’s Most Ambitious Survival Horror Yet',
-    subtitle: 'Leon S. Kennedy returns in an isolated Southeast Asian archipelago powered by upgraded RE Engine tech.',
-    excerpt: 'Capcom insiders confirm Resident Evil 9 features seamless open-zone islands, persistent stalker enemies, and terrifying folklore monstrosities.',
-    category: 'News',
-    subCategory: 'Upcoming',
-    coverImage: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80',
-    fallbackTheme: 'standard',
-    author: AUTHORS.alex_vance,
-    publishedAt: 'Oct 05, 2026',
-    readTime: '5 min read',
-    tags: ['Resident Evil', 'Capcom', 'Horror', 'PlayStation 5', 'PC'],
-    content: {
-      intro: 'Following the critical acclaim of Resident Evil 4 Remake and Resident Evil Village, Capcom is ready to conclude its modern overarching narrative with Resident Evil 9: Requiem.',
-      sections: [
-        {
-          heading: 'A Departure to Island Isolation',
-          id: 'island-isolation',
-          paragraphs: [
-            'The setting shifts to a forgotten fictional archipelago in the Java Sea. Players must navigate flooded mangrove swamps, subterranean ritual temples, and decaying colonial laboratories.',
-            'Resource management returns to its strictest survival roots: ammunition is scarce, crafting takes physical time, and weapons degrade under heavy saline moisture.'
-          ]
-        }
-      ],
-      conclusion: 'Capcom continues to operate at the pinnacle of survival horror craft.'
-    }
-  },
-  {
     id: 'xbox-next-gen-hybrid-strategy',
     slug: 'xbox-next-gen-hybrid-handheld-strategy',
     title: 'Xbox’s Next Chapter: Windows-Powered Handhelds and Cloud Seamlessness',
@@ -586,7 +836,7 @@ export const ARTICLES: Article[] = [
     excerpt: 'We analyze early engineering sample benchmarks for NVIDIA’s flagship Blackwell consumer GPU across Cyberpunk 2077, Alan Wake 2, and Black Myth: Wukong.',
     category: 'Hardware',
     subCategory: 'Graphics Cards',
-    coverImage: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=1200&q=80',
     fallbackTheme: 'hardware',
     author: AUTHORS.sarah_chen,
     publishedAt: 'Oct 03, 2026',
@@ -604,146 +854,6 @@ export const ARTICLES: Article[] = [
         }
       ],
       conclusion: 'While the price tag commands a premium enthusiast investment, the RTX 5090 cements absolute graphics card supremacy for the next three years.'
-    }
-  },
-  {
-    id: 'steam-deck-2-valve-roadmap',
-    slug: 'valve-steam-deck-2-release-window-roadmap',
-    title: 'Valve on Steam Deck 2: Why We Aren’t Rushing a Generational Refresh',
-    subtitle: 'Gabe Newell and hardware engineers clarify why battery efficiency and generational leaps matter more than yearly spec bumps.',
-    excerpt: 'Valve’s hardware team reaffirms their commitment to a long lifecycle for the Steam Deck OLED before transitioning to a true generation-two architecture.',
-    category: 'PC',
-    subCategory: 'Hardware',
-    coverImage: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80',
-    fallbackTheme: 'elden',
-    author: AUTHORS.sarah_chen,
-    publishedAt: 'Oct 02, 2026',
-    readTime: '5 min read',
-    tags: ['Steam Deck', 'Valve', 'PC Gaming', 'Handheld', 'Hardware'],
-    content: {
-      intro: 'While competitors launch new handhelds every eight months, Valve is holding steadfast to its console-style refresh philosophy for the Steam Deck ecosystem.',
-      sections: [
-        {
-          heading: 'Waiting for the True Silicon Inflection Point',
-          id: 'silicon-inflection',
-          paragraphs: [
-            'Valve engineers maintain that releasing a Steam Deck 2 requires a significant leap in compute efficiency without degrading current 4-to-6 hour battery profiles. That threshold will likely be achieved when 3nm mobile APUs mature.'
-          ]
-        }
-      ],
-      conclusion: 'For existing Deck owners, this stability means developer optimization remains focused and enduring.'
-    }
-  },
-  {
-    id: 'fortnite-chapter-6-unreal-5-5-revamp',
-    slug: 'fortnite-chapter-6-unreal-engine-5-5-physics-revamp',
-    title: 'Fortnite Chapter 6: Unreal Engine 5.5 Physics, Dynamic Foliage, and Competitive Meta',
-    subtitle: 'Epic Games’ flagship battle royale introduces volumetric sandstorms, destruction overhauls, and ranked balance shifts.',
-    excerpt: 'A comprehensive breakdown of Fortnite Chapter 6’s mechanical overhaul, Nanite foliage improvements, and how the competitive tournament circuit is reacting.',
-    category: 'Esports',
-    subCategory: 'Battle Royale',
-    coverImage: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80',
-    fallbackTheme: 'esports',
-    author: AUTHORS.david_miller,
-    publishedAt: 'Oct 01, 2026',
-    readTime: '6 min read',
-    tags: ['Fortnite', 'Epic Games', 'Unreal Engine', 'Esports', 'Battle Royale'],
-    content: {
-      intro: 'Fortnite continues to serve as both the world’s most popular digital playground and Epic Games’ live testing facility for Unreal Engine breakthroughs.',
-      sections: [
-        {
-          heading: 'Chaos Destruction 2.0',
-          id: 'chaos-destruction',
-          paragraphs: [
-            'Buildings now collapse with real-time structural stress calculations rather than uniform tile destruction. Heavy ordinance brings down entire foundational towers with realistic debris physics.'
-          ]
-        }
-      ],
-      conclusion: 'Epic continues to prove why Fortnite outlives every fleeting competitor in the live-service arena.'
-    }
-  },
-  {
-    id: 'assassins-creed-shadows-stealth-mechanics',
-    slug: 'assassins-creed-shadows-dual-protagonist-stealth-deep-dive',
-    title: 'Assassin’s Creed Shadows: Why the Light and Shadow Stealth System Changes Everything',
-    subtitle: 'How Naoe’s shinobi infiltration mechanics and Yasuke’s brutal armored samurai combat create Ubisoft’s finest sandbox in years.',
-    excerpt: 'Hands-on impressions with Assassin’s Creed Shadows showcase dynamic extinguishing of lanterns, crawling through floorboards, and seasonal weather impact.',
-    category: 'News',
-    subCategory: 'Preview',
-    coverImage: 'https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=1200&q=80',
-    fallbackTheme: 'ghost',
-    author: AUTHORS.alex_vance,
-    publishedAt: 'Sep 30, 2026',
-    readTime: '7 min read',
-    tags: ['Assassins Creed Shadows', 'Ubisoft', 'Stealth', 'Action RPG', 'PlayStation 5'],
-    content: {
-      intro: 'After years of fan anticipation for a feudal Japanese setting, Ubisoft Quebec is delivering a twin-protagonist experience that directly contrasts patient shinobi stealth with thunderous samurai siege warfare.',
-      sections: [
-        {
-          heading: 'Real Light Perception and Dynamic Shadow Hiding',
-          id: 'light-perception',
-          paragraphs: [
-            'Borrowing cues from Splinter Cell and classic Tenchu, Naoe is completely invisible when crouched inside dark alcoves. Players can throw shuriken at paper lanterns to extinguish interior lighting before striking.'
-          ]
-        }
-      ],
-      conclusion: 'Shadows appears to bridge the gap between classic stealth purism and modern sprawling RPG freedom.'
-    }
-  },
-  {
-    id: 'call-of-duty-black-ops-6-meta-breakdown',
-    slug: 'call-of-duty-black-ops-6-omnimovement-multiplayer-meta',
-    title: 'Call of Duty: Black Ops 6 — Mastering Omnimovement and the Current Ranked Meta',
-    subtitle: 'How 360-degree sprinting, sliding, and diving has permanently altered gunfight geometry and crosshair placement.',
-    excerpt: 'A pro guide to mastering Black Ops 6’s revolutionary movement engine, best assault rifle loadouts, and tactical audio settings.',
-    category: 'Guides',
-    subCategory: 'Multiplayer Strategy',
-    coverImage: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80',
-    fallbackTheme: 'standard',
-    author: AUTHORS.david_miller,
-    publishedAt: 'Sep 29, 2026',
-    readTime: '6 min read',
-    tags: ['Call of Duty', 'Black Ops 6', 'FPS', 'Guides', 'Multiplayer'],
-    content: {
-      intro: 'Black Ops 6’s introduction of Omnimovement represents the biggest single disruption to Call of Duty gunplay since sliding was introduced in Advanced Warfare.',
-      sections: [
-        {
-          heading: 'The Mechanics of Supine Aiming',
-          id: 'supine-aiming',
-          paragraphs: [
-            'Players can now dive backward down staircases and rotate 360 degrees while firing from their backs. This makes corner-clearing significantly more dangerous and requires tighter crosshair discipline.'
-          ]
-        }
-      ],
-      conclusion: 'Mastering backward slides and momentum bunny-hops is no longer optional—it is required to survive high-SBMM lobbies.'
-    }
-  },
-  {
-    id: 'cyberpunk-orion-unreal-engine-switch',
-    slug: 'cyberpunk-2077-sequel-project-orion-cdpr-unreal-engine-5',
-    title: 'Project Orion: How CD Projekt Red Is Building the Cyberpunk Sequel in Unreal Engine 5',
-    subtitle: 'From the streets of Boston Studio to Epic Games engineering collaborations, CDPR redefines Night City.',
-    excerpt: 'An investigative report into CDPR’s new North American studio, the retirement of REDengine, and what fans can expect from the next dark futuristic adventure.',
-    category: 'News',
-    subCategory: 'Industry Feature',
-    coverImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
-    fallbackTheme: 'cyber',
-    author: AUTHORS.elena_rostova,
-    publishedAt: 'Sep 28, 2026',
-    readTime: '8 min read',
-    tags: ['Cyberpunk', 'CD Projekt Red', 'Unreal Engine 5', 'Project Orion', 'News'],
-    content: {
-      intro: 'Following Phantom Liberty’s triumph, CD Projekt Red closed the chapter on REDengine and embarked on a historic multi-project collaboration with Epic Games using Unreal Engine 5.',
-      sections: [
-        {
-          heading: 'Nanite Geometry and Lumen Verticality',
-          id: 'nanite-lumen',
-          paragraphs: [
-            'The vertical sprawl of Night City required bespoke modifications to Unreal 5’s streaming architecture. The Boston and Warsaw engineering teams are building custom crowd simulation tools designed for dense multi-tier cybernetic metropolises.'
-          ]
-        }
-      ],
-      conclusion: 'Project Orion is shaping up to fulfill the boundless promise that first drew millions to Night City.'
     }
   }
 ];

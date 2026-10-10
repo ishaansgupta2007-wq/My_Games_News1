@@ -49,7 +49,7 @@ export const BreakingTicker: React.FC<BreakingTickerProps> = ({ articles, onSele
                 </h3>
               </div>
               <span className="text-[11px] text-neutral-500 group-hover:text-neutral-400 transition-colors">
-                By {art.author.name}
+                By {art.author?.name || 'Staff Writer'}
               </span>
             </div>
           </div>

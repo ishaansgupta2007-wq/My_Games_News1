@@ -11,7 +11,7 @@ export const HARDWARE_PRODUCTS: HardwareProduct[] = [
     price: '$1,999',
     rating: 9.7,
     shortDescription: 'The undisputed king of enthusiast 4K path tracing, packed with 32GB GDDR7 memory and Blackwell architecture.',
-    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=1200&q=80',
     specs: {
       'Architecture': 'Blackwell (TSMC 4NP)',
       'VRAM': '32GB GDDR7 (512-bit)',
@@ -41,7 +41,7 @@ export const HARDWARE_PRODUCTS: HardwareProduct[] = [
     price: '$389',
     rating: 9.8,
     shortDescription: 'The crown jewel of pure gaming performance thanks to AMD’s revolutionary 3D V-Cache architecture.',
-    image: 'https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&q=80',
     specs: {
       'Cores / Threads': '8 Cores / 16 Threads',
       'Base / Boost Clock': '4.2 GHz / 5.0 GHz',
@@ -101,7 +101,7 @@ export const HARDWARE_PRODUCTS: HardwareProduct[] = [
     price: '$84',
     rating: 9.3,
     shortDescription: 'Limited edition collector controller sporting golden brushstroke artwork, premium grip textures, and haptic triggers.',
-    image: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/ps5-dualsense-ghost-of-yotei.webp',
     specs: {
       'Connectivity': 'Bluetooth 5.1 & USB-C',
       'Feedback': 'Dynamic Dual Haptic Actuators',

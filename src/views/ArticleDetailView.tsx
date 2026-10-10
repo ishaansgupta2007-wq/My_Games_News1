@@ -98,16 +98,18 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
         {/* Byline Bar */}
         <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-neutral-800/80 text-xs">
           <div className="flex items-center gap-3">
-            <img
-              src={article.author.avatar}
-              alt={article.author.name}
-              className="w-10 h-10 rounded-full object-cover border border-neutral-700"
-            />
+            {article.author?.avatar && (
+              <img
+                src={article.author.avatar}
+                alt={article.author.name}
+                className="w-10 h-10 rounded-full object-cover border border-neutral-700"
+              />
+            )}
             <div>
               <span className="font-semibold text-white block text-sm">
-                By {article.author.name}
+                By {article.author?.name || 'Staff Writer'}
               </span>
-              <span className="text-neutral-400">{article.author.role}</span>
+              <span className="text-neutral-400">{article.author?.role || 'Contributor'}</span>
             </div>
           </div>
 
@@ -256,29 +258,33 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
           </div>
 
           {/* Author Card */}
-          <div className="mt-12 p-6 rounded-2xl bg-neutral-900 border border-neutral-800 flex flex-col sm:flex-row items-center sm:items-start gap-5">
-            <img
-              src={article.author.avatar}
-              alt={article.author.name}
-              className="w-16 h-16 rounded-full object-cover border border-neutral-700 shrink-0"
-            />
-            <div className="text-center sm:text-left space-y-1.5">
-              <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                <h4 className="text-base font-bold text-white font-display">
-                  {article.author.name}
-                </h4>
-                <span className="text-xs font-mono text-rose-400">{article.author.role}</span>
-              </div>
-              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
-                {article.author.bio}
-              </p>
-              {article.author.twitter && (
-                <span className="text-xs font-mono text-neutral-500 block pt-1">
-                  Follow {article.author.twitter}
-                </span>
+          {article.author && (
+            <div className="mt-12 p-6 rounded-2xl bg-neutral-900 border border-neutral-800 flex flex-col sm:flex-row items-center sm:items-start gap-5">
+              {article.author.avatar && (
+                <img
+                  src={article.author.avatar}
+                  alt={article.author.name}
+                  className="w-16 h-16 rounded-full object-cover border border-neutral-700 shrink-0"
+                />
               )}
+              <div className="text-center sm:text-left space-y-1.5">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                  <h4 className="text-base font-bold text-white font-display">
+                    {article.author.name}
+                  </h4>
+                  <span className="text-xs font-mono text-rose-400">{article.author.role}</span>
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                  {article.author.bio}
+                </p>
+                {article.author.twitter && (
+                  <span className="text-xs font-mono text-neutral-500 block pt-1">
+                    Follow {article.author.twitter}
+                  </span>
+                )}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Comments Section */}
           <CommentsSection articleId={article.id} />

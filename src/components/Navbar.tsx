@@ -58,7 +58,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <span className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-neutral-900 border border-neutral-800 overflow-hidden group-hover:border-rose-500/50 transition-colors shadow-sm">
               <img
-                src="/images/e08fea0415b781b60747fb4d5200d301.webp"
+                src="/images/logo_hero_image.jpg"
                 alt="GamePulse Emblem"
                 className="w-full h-full object-cover"
                 onError={(e) => {
