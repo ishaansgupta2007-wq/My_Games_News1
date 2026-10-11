@@ -40,8 +40,8 @@ export const GAMES: GameProfile[] = [
     releaseDate: '2026',
     platforms: ['PlayStation 5'],
     genre: 'Superhero Action Adventure',
-    coverImage: '/images/wolverine-spider-man-game.jpg',
-    bannerImage: '/images/wolverine-spider-man-game.jpg',
+    coverImage: '/images/spider-man-wolverine-insomniac.jpg',
+    bannerImage: '/images/spider-man-wolverine-insomniac.jpg',
     description: 'A mature, visceral action adventure chronicling Logan’s feral odyssey across Madripoor and beyond. Set within the same connected Marvel universe as Insomniac’s acclaimed Marvel’s Spider-Man series.',
     metaScore: 95,
     officialSite: 'https://insomniac.games/game/marvels-wolverine/'

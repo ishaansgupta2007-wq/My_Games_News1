@@ -124,6 +124,29 @@ export default function App() {
     navigate(`/games/${slug}`);
   };
 
+  // SEO helper to update title, meta description, and social tags dynamically
+  const applySEO = (title: string, description: string) => {
+    document.title = title;
+
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute('content', description);
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', title);
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute('content', title);
+
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', description);
+    const twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twDesc) twDesc.setAttribute('content', description);
+  };
+
   // Route Resolver
   const renderCurrentView = () => {
     const path = currentPath;
@@ -131,7 +154,10 @@ export default function App() {
 
     // Homepage
     if (path === '/' || path === '') {
-      document.title = 'GamePulse — Gaming News, Latest Gaming Updates & Video Game News';
+      applySEO(
+        'Gaming News & Latest Video Game Updates | GamePulse',
+        "Explore authoritative gaming news, unbiased scored reviews, in-depth technical guides, and GPU benchmarks. Stay ahead with GamePulse's daily industry pulse."
+      );
       return (
         <HomeView
           onNavigate={navigate}
@@ -146,37 +172,58 @@ export default function App() {
 
     // Category Pages
     if (path === '/news' || path.startsWith('/news?')) {
-      document.title = 'Gaming News & Reports | GamePulse';
+      applySEO(
+        'Gaming News: Latest Video Game Reports | GamePulse',
+        'Catch up on breaking video game news and industry scoops. Our correspondents report the latest gaming updates across PlayStation, Xbox, PC, and Switch.'
+      );
       return <NewsView onSelectArticle={handleSelectArticle} />;
     }
 
     if (path === '/reviews') {
-      document.title = 'Scored Game Reviews | GamePulse';
+      applySEO(
+        'Video Game Reviews & Scored Lab Tests | GamePulse',
+        'Read rigorous, scored video game reviews tested across graphics, gameplay, performance, and replayability. Find your next masterpiece with GamePulse ratings.'
+      );
       return <ReviewsView onSelectReview={handleSelectReview} />;
     }
 
     if (path === '/guides') {
-      document.title = 'Tactical Guides & Walkthroughs | GamePulse';
+      applySEO(
+        'Gaming Guides, Walkthroughs & Strategies | GamePulse',
+        'Master challenging boss battles and optimize settings with detailed gaming guides, interactive walkthroughs, and tactical strategies from expert players.'
+      );
       return <GuidesView onSelectGuide={handleSelectGuide} />;
     }
 
     if (path === '/upcoming-games') {
-      document.title = 'Upcoming Game Releases & Radar | GamePulse';
+      applySEO(
+        'Upcoming Video Games: 2026 Release Radar | GamePulse',
+        'Track the most anticipated upcoming video games across 2026 and 2027. Browse confirmed release dates, trailers, platforms, and radar analysis on GamePulse.'
+      );
       return <UpcomingGamesView onSelectGame={handleSelectGame} />;
     }
 
     if (path === '/hardware') {
-      document.title = 'Hardware Lab & Tech Benchmarks | GamePulse';
+      applySEO(
+        'Gaming Hardware Reviews & GPU Benchmarks | GamePulse',
+        'Browse expert gaming hardware reviews, GPU benchmarks, OLED displays, and battlestation peripherals tested for competitive latency and thermal limits.'
+      );
       return <HardwareView onSelectHardware={handleSelectHardware} />;
     }
 
     if (path === '/esports') {
-      document.title = 'Esports Circuit & Meta Analysis | GamePulse';
+      applySEO(
+        'Esports News, Tournaments & Meta Guides | GamePulse',
+        'Stay competitive with daily esports news, tournament breakdowns, patch balance analysis, and pro circuit rosters across Fortnite, Valorant, and Counter-Strike.'
+      );
       return <EsportsView onSelectArticle={handleSelectArticle} />;
     }
 
     if (path === '/search') {
-      document.title = 'Search Articles & Database | GamePulse';
+      applySEO(
+        'Search Gaming News, Reviews & Hardware | GamePulse',
+        'Instantly search gaming archives for breaking stories, scored game reviews, boss walkthroughs, and hardware benchmarks across the complete GamePulse database.'
+      );
       return (
         <SearchView
           onSelectArticle={handleSelectArticle}
@@ -193,7 +240,11 @@ export default function App() {
       const slug = path.split('/')[2];
       const foundGame = GAMES.find((g) => g.slug === slug || g.id === slug);
       if (foundGame) {
-        document.title = `${foundGame.title} - Game Hub & News | GamePulse`;
+        const shortName = foundGame.title.replace(' Remastered', '').split(':')[0].split('&')[0].trim();
+        applySEO(
+          `${shortName}: Game Hub, News & Guides | GamePulse`,
+          `Discover complete coverage of ${foundGame.title} on GamePulse. Read confirmed release dates, platforms, gameplay trailers, latest news reports, and expert guides.`
+        );
         return (
           <GameDetailView
             game={foundGame}
@@ -214,7 +265,6 @@ export default function App() {
 
       const foundArticle = findArticle(slug);
       if (foundArticle) {
-        document.title = `${foundArticle.title} | GamePulse`;
         return (
           <ArticleDetailView
             article={foundArticle}
@@ -228,7 +278,6 @@ export default function App() {
       const foundReview = REVIEWS.find((r) => r.slug === slug || r.id === slug);
       if (foundReview) {
         const reviewArticle = ARTICLES.find((a) => a.gameSlug === foundReview.gameSlug) || ARTICLES[0];
-        document.title = `${foundReview.gameTitle} Review | GamePulse`;
         return (
           <ArticleDetailView
             article={reviewArticle}
@@ -242,7 +291,6 @@ export default function App() {
       const foundGuide = GUIDES.find((g) => g.slug === slug || g.id === slug);
       if (foundGuide) {
         const guideArticle = ARTICLES.find((a) => a.gameSlug === foundGuide.gameSlug) || ARTICLES[1];
-        document.title = `${foundGuide.title} | GamePulse`;
         return (
           <ArticleDetailView
             article={guideArticle}
@@ -256,7 +304,6 @@ export default function App() {
       const foundProduct = HARDWARE_PRODUCTS.find((p) => p.slug === slug || p.id === slug);
       if (foundProduct) {
         const hwArticle = ARTICLES.find((a) => a.id === 'rtx-5090-benchmarks-breakdown' || a.category === 'Hardware') || ARTICLES[3];
-        document.title = `${foundProduct.name} Benchmark Review | GamePulse`;
         return (
           <ArticleDetailView
             article={hwArticle}
@@ -270,7 +317,6 @@ export default function App() {
     // Direct Unique Article URL (e.g. /intergalactic-heretic-prophet, /gta-6-news, /fortnite-updates)
     const directArticle = findArticle(cleanSlug);
     if (directArticle) {
-      document.title = `${directArticle.title} | GamePulse`;
       return (
         <ArticleDetailView
           article={directArticle}
@@ -285,7 +331,11 @@ export default function App() {
       (g) => g.slug.toLowerCase() === cleanSlug.toLowerCase() || g.id.toLowerCase() === cleanSlug.toLowerCase()
     );
     if (directGame) {
-      document.title = `${directGame.title} - Game Hub & News | GamePulse`;
+      const shortName = directGame.title.replace(' Remastered', '').split(':')[0].split('&')[0].trim();
+      applySEO(
+        `${shortName}: Game Hub, News & Guides | GamePulse`,
+        `Discover complete coverage of ${directGame.title} on GamePulse. Read confirmed release dates, platforms, gameplay trailers, latest news reports, and expert guides.`
+      );
       return (
         <GameDetailView
           game={directGame}
@@ -299,7 +349,10 @@ export default function App() {
     }
 
     // 404 Fallback
-    document.title = 'Page Not Found | GamePulse';
+    applySEO(
+      'Page Not Found: 404 Beyond The Map | GamePulse',
+      'The requested page could not be found beyond the map boundary. Return to the GamePulse homepage for breaking gaming news, reviews, and hardware guides.'
+    );
     return <NotFoundView onNavigate={navigate} />;
   };
 

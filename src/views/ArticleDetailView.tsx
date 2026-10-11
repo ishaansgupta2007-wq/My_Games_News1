@@ -26,6 +26,12 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
     const pageTitle = article.metaTitle || `${article.title} | GamePulse`;
     document.title = pageTitle;
 
+    // OpenGraph & Twitter title sync
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', pageTitle);
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute('content', pageTitle);
+
     // Meta description
     const descContent = article.metaDescription || article.excerpt;
     let metaDesc = document.querySelector('meta[name="description"]');
