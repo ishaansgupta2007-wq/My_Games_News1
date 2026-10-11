@@ -97,15 +97,15 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
       {/* Overview & Quick Info */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-8 space-y-6">
-          <h2 className="text-2xl font-bold text-white font-display">Overview & Synopsis</h2>
-          <p className="text-base text-neutral-300 leading-relaxed font-sans">
+          <h2 className="text-2xl font-bold text-neutral-900 dark:text-white font-display">Overview & Synopsis</h2>
+          <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-sans">
             {game.description}
           </p>
 
           {/* Game Reviews */}
           {gameReviews.length > 0 && (
-            <div className="pt-8 border-t border-neutral-800">
-              <h3 className="text-xl font-bold text-white font-display mb-6">
+            <div className="pt-8 border-t border-neutral-200 dark:border-neutral-800">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display mb-6">
                 Critical Reviews ({gameReviews.length})
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -118,8 +118,8 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
 
           {/* Guides */}
           {gameGuides.length > 0 && (
-            <div className="pt-8 border-t border-neutral-800">
-              <h3 className="text-xl font-bold text-white font-display mb-6">
+            <div className="pt-8 border-t border-neutral-200 dark:border-neutral-800">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display mb-6">
                 Tactical Guides & Walkthroughs ({gameGuides.length})
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -132,8 +132,8 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
 
           {/* Related News Coverage */}
           {gameArticles.length > 0 && (
-            <div className="pt-8 border-t border-neutral-800">
-              <h3 className="text-xl font-bold text-white font-display mb-6">
+            <div className="pt-8 border-t border-neutral-200 dark:border-neutral-800">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display mb-6">
                 Related News & Deep Dives ({gameArticles.length})
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -147,30 +147,30 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
 
         {/* Sidebar */}
         <div className="lg:col-span-4 space-y-6">
-          <div className="p-6 rounded-xl bg-neutral-900 border border-neutral-800 space-y-4">
-            <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold">
+          <div className="p-6 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 space-y-4 shadow-xs dark:shadow-none">
+            <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 font-semibold">
               Game Metadata
             </h3>
             <div className="space-y-3 text-xs font-mono">
               <div>
                 <span className="text-neutral-500 block">Developer</span>
-                <span className="text-white font-medium">{game.developer}</span>
+                <span className="text-neutral-900 dark:text-white font-medium">{game.developer}</span>
               </div>
               <div>
                 <span className="text-neutral-500 block">Publisher</span>
-                <span className="text-white font-medium">{game.publisher}</span>
+                <span className="text-neutral-900 dark:text-white font-medium">{game.publisher}</span>
               </div>
               <div>
                 <span className="text-neutral-500 block">Release Window</span>
-                <span className="text-white font-medium">{game.releaseDate}</span>
+                <span className="text-neutral-900 dark:text-white font-medium">{game.releaseDate}</span>
               </div>
               <div>
                 <span className="text-neutral-500 block">Target Platforms</span>
-                <span className="text-white font-medium">{game.platforms.join(', ')}</span>
+                <span className="text-neutral-900 dark:text-white font-medium">{game.platforms.join(', ')}</span>
               </div>
               <div>
                 <span className="text-neutral-500 block">Genre</span>
-                <span className="text-white font-medium">{game.genre}</span>
+                <span className="text-neutral-900 dark:text-white font-medium">{game.genre}</span>
               </div>
             </div>
 
@@ -179,7 +179,7 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
                 href={game.officialSite}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-white text-xs font-semibold transition-colors"
+                className="mt-4 flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white text-xs font-semibold transition-colors"
               >
                 <Globe className="w-3.5 h-3.5" />
                 <span>Visit Official Site</span>
@@ -188,8 +188,8 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
           </div>
 
           {/* Other Featured Games */}
-          <div className="p-6 rounded-xl bg-neutral-900/60 border border-neutral-800/80 space-y-4">
-            <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold">
+          <div className="p-6 rounded-xl bg-white dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800/80 space-y-4 shadow-xs dark:shadow-none">
+            <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 font-semibold">
               Other Profiles
             </h3>
             <div className="space-y-3">

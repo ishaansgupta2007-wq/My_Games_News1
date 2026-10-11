@@ -104,14 +104,14 @@ export const SearchView: React.FC<SearchViewProps> = ({
     <div className="space-y-10">
       {/* Search Header */}
       <div className="max-w-3xl mx-auto text-center space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-rose-400 text-xs font-mono font-medium">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-rose-600 dark:text-rose-400 text-xs font-mono font-medium">
           <Search className="w-3.5 h-3.5" />
           <span>GamePulse Database</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white font-display tracking-tight">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 dark:text-white font-display tracking-tight">
           Search the Archives
         </h1>
-        <p className="text-sm text-neutral-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Instant indexing across 15+ news investigations, scored reviews, tactical guides, hardware benchmarks, and game profiles.
         </p>
 
@@ -127,7 +127,7 @@ export const SearchView: React.FC<SearchViewProps> = ({
               <button
                 key={term}
                 onClick={() => setQuery(term)}
-                className="px-2.5 py-1 rounded-md bg-neutral-900 hover:bg-neutral-800 text-neutral-300 hover:text-white border border-neutral-800 hover:border-neutral-700 text-xs transition-colors cursor-pointer"
+                className="px-2.5 py-1 rounded-md bg-white dark:bg-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 text-xs transition-colors cursor-pointer shadow-xs dark:shadow-none"
               >
                 {term}
               </button>
@@ -145,12 +145,12 @@ export const SearchView: React.FC<SearchViewProps> = ({
       </div>
 
       {/* Results Count & Query Notice */}
-      <div className="flex items-center justify-between pb-3 border-b border-neutral-800 text-xs font-mono">
-        <span className="text-neutral-400">
+      <div className="flex items-center justify-between pb-3 border-b border-neutral-200 dark:border-neutral-800 text-xs font-mono">
+        <span className="text-neutral-600 dark:text-neutral-400">
           {query ? (
             <>
-              Found <strong className="text-white">{results.total}</strong> results for "
-              <span className="text-rose-400">{query}</span>"
+              Found <strong className="text-neutral-900 dark:text-white">{results.total}</strong> results for "
+              <span className="text-rose-600 dark:text-rose-400">{query}</span>"
             </>
           ) : (
             <>Showing all catalog items ({results.total})</>
@@ -161,17 +161,17 @@ export const SearchView: React.FC<SearchViewProps> = ({
 
       {/* Empty State */}
       {results.total === 0 && (
-        <div className="py-20 text-center rounded-2xl bg-neutral-900/40 border border-neutral-800 max-w-lg mx-auto p-8 space-y-4">
-          <div className="w-12 h-12 rounded-full bg-neutral-800/80 mx-auto flex items-center justify-center text-neutral-400">
+        <div className="py-20 text-center rounded-2xl bg-white dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-800 max-w-lg mx-auto p-8 space-y-4 shadow-sm dark:shadow-none">
+          <div className="w-12 h-12 rounded-full bg-neutral-100 dark:bg-neutral-800/80 mx-auto flex items-center justify-center text-neutral-600 dark:text-neutral-400">
             <FileQuestion className="w-6 h-6" />
           </div>
-          <h3 className="text-lg font-bold text-white font-display">No matches discovered</h3>
-          <p className="text-xs text-neutral-400 leading-relaxed">
+          <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">No matches discovered</h3>
+          <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
             We couldn't find any stories, reviews, or hardware matching "{query}". Try checking your spelling or searching for a broader term like "PS5", "Elden Ring", or "RTX".
           </p>
           <button
             onClick={() => setQuery('')}
-            className="px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-white text-xs font-semibold cursor-pointer transition-colors"
+            className="px-4 py-2 rounded-lg bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white text-xs font-semibold cursor-pointer transition-colors"
           >
             Clear Search
           </button>

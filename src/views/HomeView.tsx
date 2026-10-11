@@ -60,10 +60,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <div className="flex items-center justify-between pb-4 border-b border-neutral-200 dark:border-neutral-800">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display tracking-tight">
-              Latest Stories
+              Latest Gaming News & Updates
             </h2>
             <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-1">
-              Fresh reporting from our correspondents across PlayStation, PC, Xbox, and Nintendo.
+              Your source for breaking gaming news, the latest gaming updates, and authoritative video game news across PlayStation, PC, Xbox, and Nintendo.
             </p>
           </div>
           <button
@@ -124,19 +124,19 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <TrendingList articles={ARTICLES} onSelect={onSelectArticle} />
 
             {/* Editorial Spotlight Banner */}
-            <div className="rounded-2xl p-6 bg-gradient-to-br from-neutral-900 via-neutral-900 to-rose-950/30 border border-neutral-800 text-neutral-300 space-y-3">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-rose-400 font-semibold block">
+            <div className="rounded-2xl p-6 bg-gradient-to-br from-rose-50 via-white to-slate-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-rose-950/30 border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 space-y-3 shadow-xs dark:shadow-none">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-rose-600 dark:text-rose-400 font-semibold block">
                 GamePulse Special Report
               </span>
-              <h3 className="text-lg font-bold text-white font-display leading-snug">
+              <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display leading-snug">
                 FromSoftware & The Architecture of Suffering
               </h3>
-              <p className="text-xs text-neutral-400 leading-relaxed">
+              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Why Miyazaki’s spatial philosophy in Shadow of the Erdtree redefines vertical world construction.
               </p>
               <button
-                onClick={() => onSelectArticle('elden-ring-shadow-erdtree-pc-controls-optimization')}
-                className="inline-flex items-center gap-1.5 text-xs text-rose-400 hover:text-rose-300 font-medium pt-2 cursor-pointer"
+                onClick={() => onSelectArticle('elden-ring-shadow-erdtree-controller-guide')}
+                className="inline-flex items-center gap-1.5 text-xs text-rose-600 hover:text-rose-700 dark:text-rose-400 dark:hover:text-rose-300 font-medium pt-2 cursor-pointer"
               >
                 <span>Read Analysis</span>
                 <ArrowRight className="w-3 h-3" />

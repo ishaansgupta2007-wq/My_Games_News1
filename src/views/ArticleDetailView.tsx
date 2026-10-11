@@ -21,20 +21,72 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
   onNavigate,
   onSelectArticle,
 }) => {
-  // Update document title and SEO meta description
+  // Update document title, SEO keywords, description, and structured data
   React.useEffect(() => {
     const pageTitle = article.metaTitle || `${article.title} | GamePulse`;
     document.title = pageTitle;
 
-    if (article.metaDescription) {
-      let metaDesc = document.querySelector('meta[name="description"]');
-      if (!metaDesc) {
-        metaDesc = document.createElement('meta');
-        metaDesc.setAttribute('name', 'description');
-        document.head.appendChild(metaDesc);
-      }
-      metaDesc.setAttribute('content', article.metaDescription);
+    // Meta description
+    const descContent = article.metaDescription || article.excerpt;
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      document.head.appendChild(metaDesc);
     }
+    metaDesc.setAttribute('content', descContent);
+
+    // Meta keywords
+    if (article.keywords) {
+      const allKws = [article.keywords.main, ...article.keywords.related, ...article.tags].join(', ');
+      let metaKw = document.querySelector('meta[name="keywords"]');
+      if (!metaKw) {
+        metaKw = document.createElement('meta');
+        metaKw.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKw);
+      }
+      metaKw.setAttribute('content', allKws);
+    }
+
+    // Schema.org NewsArticle JSON-LD
+    const ldJsonId = 'article-structured-data';
+    let scriptTag = document.getElementById(ldJsonId) as HTMLScriptElement | null;
+    if (!scriptTag) {
+      scriptTag = document.createElement('script');
+      scriptTag.id = ldJsonId;
+      scriptTag.type = 'application/ld+json';
+      document.head.appendChild(scriptTag);
+    }
+
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'NewsArticle',
+      'headline': article.title,
+      'description': descContent,
+      'image': article.coverImage ? [article.coverImage] : [],
+      'datePublished': article.publishedAt,
+      'dateModified': article.updatedAt || article.publishedAt,
+      'author': [{
+        '@type': 'Person',
+        'name': article.author?.name || 'GamePulse Staff',
+        'jobTitle': article.author?.role || 'Staff Writer'
+      }],
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'GamePulse',
+        'url': 'https://gamepulse.media'
+      },
+      'keywords': article.keywords
+        ? [article.keywords.main, ...article.keywords.related]
+        : article.tags
+    };
+    scriptTag.textContent = JSON.stringify(structuredData);
+
+    return () => {
+      // Clean up dynamic structured data script when unmounting
+      const tag = document.getElementById(ldJsonId);
+      if (tag) tag.remove();
+    };
   }, [article]);
 
   const tocItems = article.content.sections.map((s) => ({
@@ -63,7 +115,7 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
         />
         <button
           onClick={() => onNavigate('/')}
-          className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-400 hover:text-white transition-colors cursor-pointer self-start sm:self-auto"
+          className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors cursor-pointer self-start sm:self-auto"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Back to Feed</span>
@@ -73,47 +125,47 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
       {/* Article Header */}
       <header className="mb-10 max-w-4xl">
         {/* Category & Read Time (Clean unboxed text) */}
-        <div className="flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-rose-400 mb-3">
+        <div className="flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-rose-500 dark:text-rose-400 mb-3">
           <span>{article.category}</span>
-          <span aria-hidden="true" className="text-neutral-600">·</span>
+          <span aria-hidden="true" className="text-neutral-400 dark:text-neutral-600">·</span>
           <span>{article.subCategory || 'Editorial'}</span>
           {article.isBreaking && (
             <>
-              <span aria-hidden="true" className="text-neutral-600">·</span>
-              <span className="text-amber-400 font-bold">Breaking</span>
+              <span aria-hidden="true" className="text-neutral-400 dark:text-neutral-600">·</span>
+              <span className="text-amber-500 dark:text-amber-400 font-bold">Breaking</span>
             </>
           )}
         </div>
 
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-display tracking-tight leading-[1.12] mb-4 [text-wrap:balance]">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 dark:text-white font-display tracking-tight leading-[1.12] mb-4 [text-wrap:balance]">
           {article.title}
         </h1>
 
         {article.subtitle && (
-          <p className="text-lg sm:text-xl text-neutral-300 font-serif italic mb-6 leading-relaxed">
+          <p className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-300 font-serif italic mb-6 leading-relaxed">
             {article.subtitle}
           </p>
         )}
 
         {/* Byline Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-neutral-800/80 text-xs">
+        <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-neutral-200 dark:border-neutral-800/80 text-xs">
           <div className="flex items-center gap-3">
             {article.author?.avatar && (
               <img
                 src={article.author.avatar}
                 alt={article.author.name}
-                className="w-10 h-10 rounded-full object-cover border border-neutral-700"
+                className="w-10 h-10 rounded-full object-cover border border-neutral-300 dark:border-neutral-700"
               />
             )}
             <div>
-              <span className="font-semibold text-white block text-sm">
+              <span className="font-semibold text-neutral-900 dark:text-white block text-sm">
                 By {article.author?.name || 'Staff Writer'}
               </span>
-              <span className="text-neutral-400">{article.author?.role || 'Contributor'}</span>
+              <span className="text-neutral-500 dark:text-neutral-400">{article.author?.role || 'Contributor'}</span>
             </div>
           </div>
 
-          <div className="flex items-center gap-4 text-neutral-400 font-mono text-[11px]">
+          <div className="flex items-center gap-4 text-neutral-500 dark:text-neutral-400 font-mono text-[11px]">
             <div className="flex items-center gap-1">
               <Calendar className="w-3.5 h-3.5" />
               <span>{article.publishedAt}</span>
@@ -245,36 +297,54 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
           </div>
 
           {/* Tags */}
-          <div className="mt-10 pt-6 border-t border-neutral-800 flex flex-wrap items-center gap-2">
+          <div className="mt-10 pt-6 border-t border-neutral-200 dark:border-neutral-800 flex flex-wrap items-center gap-2">
             <span className="text-xs font-mono uppercase text-neutral-500 mr-2">Filed Under:</span>
             {article.tags.map((t) => (
               <span
                 key={t}
-                className="px-2.5 py-1 rounded bg-neutral-900 border border-neutral-800 text-xs font-mono text-neutral-300"
+                className="px-2.5 py-1 rounded bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-xs font-mono text-neutral-700 dark:text-neutral-300"
               >
                 #{t}
               </span>
             ))}
           </div>
 
+          {/* Topic Keywords */}
+          {article.keywords && (
+            <div className="mt-4 pt-4 border-t border-neutral-200/80 dark:border-neutral-800/80 flex flex-wrap items-center gap-2">
+              <span className="text-xs font-mono uppercase text-neutral-500 mr-2">Core Keywords:</span>
+              <span className="inline-flex items-center px-2.5 py-1 rounded bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 text-xs font-mono font-semibold border border-rose-200 dark:border-rose-900/60 shadow-2xs">
+                ★ {article.keywords.main}
+              </span>
+              {article.keywords.related.map((kw) => (
+                <span
+                  key={kw}
+                  className="inline-flex items-center px-2.5 py-1 rounded bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-xs font-mono text-neutral-600 dark:text-neutral-400"
+                >
+                  {kw}
+                </span>
+              ))}
+            </div>
+          )}
+
           {/* Author Card */}
           {article.author && (
-            <div className="mt-12 p-6 rounded-2xl bg-neutral-900 border border-neutral-800 flex flex-col sm:flex-row items-center sm:items-start gap-5">
+            <div className="mt-12 p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-xs dark:shadow-none flex flex-col sm:flex-row items-center sm:items-start gap-5">
               {article.author.avatar && (
                 <img
                   src={article.author.avatar}
                   alt={article.author.name}
-                  className="w-16 h-16 rounded-full object-cover border border-neutral-700 shrink-0"
+                  className="w-16 h-16 rounded-full object-cover border border-neutral-200 dark:border-neutral-700 shrink-0"
                 />
               )}
               <div className="text-center sm:text-left space-y-1.5">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <h4 className="text-base font-bold text-white font-display">
+                  <h4 className="text-base font-bold text-neutral-900 dark:text-white font-display">
                     {article.author.name}
                   </h4>
-                  <span className="text-xs font-mono text-rose-400">{article.author.role}</span>
+                  <span className="text-xs font-mono text-rose-500 dark:text-rose-400">{article.author.role}</span>
                 </div>
-                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                   {article.author.bio}
                 </p>
                 {article.author.twitter && (
@@ -295,25 +365,25 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
           <div className="space-y-6">
             <TableOfContents items={tocItems} />
 
-            <div className="p-5 rounded-xl bg-neutral-900/40 border border-neutral-800/80">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-400 mb-3 font-semibold">
+            <div className="p-5 rounded-xl bg-white dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-800/80 shadow-xs dark:shadow-none">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3 font-semibold">
                 Share This Analysis
               </h4>
               <ShareButtons title={article.title} />
             </div>
 
-            <div className="p-5 rounded-xl bg-gradient-to-br from-neutral-900 to-rose-950/20 border border-neutral-800">
-              <span className="text-[10px] font-mono uppercase text-rose-400 tracking-wider font-semibold block mb-1">
+            <div className="p-5 rounded-xl bg-gradient-to-br from-rose-50 via-white to-neutral-50 dark:from-neutral-900 dark:to-rose-950/20 border border-neutral-200 dark:border-neutral-800 shadow-xs dark:shadow-none">
+              <span className="text-[10px] font-mono uppercase text-rose-600 dark:text-rose-400 tracking-wider font-semibold block mb-1">
                 GamePulse Daily
               </span>
-              <p className="text-xs text-neutral-300 font-medium mb-3">
+              <p className="text-xs text-neutral-600 dark:text-neutral-300 font-medium mb-3">
                 Subscribe for priority game review digests and hardware benchmarks.
               </p>
               <button
                 onClick={() => {
                   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
                 }}
-                className="w-full py-2 rounded bg-neutral-800 hover:bg-neutral-700 text-white text-xs font-semibold transition-colors cursor-pointer"
+                className="w-full py-2 rounded bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white text-xs font-semibold transition-colors cursor-pointer"
               >
                 Subscribe Free
               </button>
@@ -323,8 +393,8 @@ export const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({
       </div>
 
       {/* Related Articles: "More from GamePulse" */}
-      <section className="mt-20 pt-12 border-t border-neutral-800">
-        <h3 className="text-2xl font-bold text-white font-display mb-8">
+      <section className="mt-20 pt-12 border-t border-neutral-200 dark:border-neutral-800">
+        <h3 className="text-2xl font-bold text-neutral-900 dark:text-white font-display mb-8">
           More from GamePulse
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

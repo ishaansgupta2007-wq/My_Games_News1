@@ -21,6 +21,11 @@ export interface Author {
   twitter?: string;
 }
 
+export interface ArticleKeywords {
+  main: string;
+  related: [string, string];
+}
+
 export interface Article {
   id: string;
   slug: string;
@@ -29,6 +34,7 @@ export interface Article {
   excerpt: string;
   metaTitle?: string;
   metaDescription?: string;
+  keywords?: ArticleKeywords;
   category: CategoryType;
   subCategory?: string;
   coverImage: string;
@@ -42,6 +48,7 @@ export interface Article {
   isTrending?: boolean;
   trendingRank?: number;
   gameSlug?: string;
+  aliases?: string[];
   tags: string[];
   content: {
     intro: string;

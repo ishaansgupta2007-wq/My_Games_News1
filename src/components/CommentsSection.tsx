@@ -76,11 +76,11 @@ export const CommentsSection: React.FC<CommentsSectionProps> = ({ articleId }) =
   };
 
   return (
-    <section className="mt-16 pt-12 border-t border-neutral-800">
+    <section className="mt-16 pt-12 border-t border-neutral-200 dark:border-neutral-800">
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center gap-2.5">
           <MessageSquare className="w-5 h-5 text-rose-500" />
-          <h3 className="text-xl font-bold text-white font-display">
+          <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
             Reader Discussion ({comments.length})
           </h3>
         </div>
@@ -88,14 +88,14 @@ export const CommentsSection: React.FC<CommentsSectionProps> = ({ articleId }) =
       </div>
 
       {/* Post comment box */}
-      <form onSubmit={handlePost} className="mb-10 p-5 rounded-xl bg-neutral-900 border border-neutral-800">
+      <form onSubmit={handlePost} className="mb-10 p-5 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-xs dark:shadow-none">
         <div className="flex flex-col sm:flex-row gap-3 mb-3">
           <input
             type="text"
             value={authorName}
             onChange={(e) => setAuthorName(e.target.value)}
             placeholder="Your name or handle..."
-            className="w-full sm:w-1/3 px-3.5 py-2 rounded-lg bg-neutral-950 border border-neutral-800 text-sm text-white placeholder:text-neutral-500 outline-none focus:border-neutral-700"
+            className="w-full sm:w-1/3 px-3.5 py-2 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-300 dark:border-neutral-800 text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 outline-none focus:border-rose-500"
           />
         </div>
         <textarea
@@ -103,7 +103,7 @@ export const CommentsSection: React.FC<CommentsSectionProps> = ({ articleId }) =
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
           placeholder="Share your perspective or tactical findings..."
-          className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-950 border border-neutral-800 text-sm text-white placeholder:text-neutral-500 outline-none focus:border-neutral-700 mb-3 resize-none"
+          className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-300 dark:border-neutral-800 text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 outline-none focus:border-rose-500 mb-3 resize-none"
         />
         <div className="flex justify-end">
           <button
@@ -122,17 +122,17 @@ export const CommentsSection: React.FC<CommentsSectionProps> = ({ articleId }) =
         {comments.map((comment) => (
           <div
             key={comment.id}
-            className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800/80 transition-colors"
+            className="p-5 rounded-xl bg-white dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800/80 shadow-xs dark:shadow-none transition-colors"
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-3">
                 <img
                   src={comment.authorAvatar}
                   alt={comment.authorName}
-                  className="w-7 h-7 rounded-full object-cover border border-neutral-700"
+                  className="w-7 h-7 rounded-full object-cover border border-neutral-200 dark:border-neutral-700"
                 />
                 <div>
-                  <span className="text-sm font-semibold text-white block">
+                  <span className="text-sm font-semibold text-neutral-900 dark:text-white block">
                     {comment.authorName}
                   </span>
                   <span className="text-[11px] text-neutral-500 font-mono">
@@ -145,8 +145,8 @@ export const CommentsSection: React.FC<CommentsSectionProps> = ({ articleId }) =
                 onClick={() => toggleLike(comment.id)}
                 className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono transition-colors cursor-pointer ${
                   comment.userLiked
-                    ? 'text-rose-400 bg-rose-950/40 border border-rose-800/60'
-                    : 'text-neutral-400 hover:text-white bg-neutral-950 border border-neutral-800'
+                    ? 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60'
+                    : 'text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white bg-neutral-100 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800'
                 }`}
               >
                 <Heart
@@ -158,7 +158,7 @@ export const CommentsSection: React.FC<CommentsSectionProps> = ({ articleId }) =
               </button>
             </div>
 
-            <p className="text-sm text-neutral-300 leading-relaxed pl-10">
+            <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed pl-10">
               {comment.content}
             </p>
           </div>

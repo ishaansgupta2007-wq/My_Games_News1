@@ -77,25 +77,35 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const findArticle = (slugOrId: string) => {
+    const clean = slugOrId.replace(/^\//, '').replace(/\/$/, '').toLowerCase();
+    return ARTICLES.find(
+      (a) =>
+        a.slug.toLowerCase() === clean ||
+        a.id.toLowerCase() === clean ||
+        a.aliases?.some((alias) => alias.toLowerCase() === clean)
+    );
+  };
+
   const handleSelectArticle = (slug: string) => {
-    navigate(`/news/${slug}`);
+    const found = findArticle(slug);
+    navigate(found ? `/${found.slug}` : `/${slug}`);
   };
 
   const handleSelectReview = (slug: string) => {
-    // Navigate to article if matching article exists or review path
-    const matchingArticle = ARTICLES.find((a) => a.slug === slug || a.id === slug);
+    // Navigate to unique article path if matching article exists or review path
+    const matchingArticle = findArticle(slug);
     if (matchingArticle) {
-      navigate(`/news/${matchingArticle.slug}`);
+      navigate(`/${matchingArticle.slug}`);
     } else {
-      // Find review and show in detail or review view
       navigate(`/reviews/${slug}`);
     }
   };
 
   const handleSelectGuide = (slug: string) => {
-    const matchingArticle = ARTICLES.find((a) => a.slug === slug || a.id === slug);
+    const matchingArticle = findArticle(slug);
     if (matchingArticle) {
-      navigate(`/news/${matchingArticle.slug}`);
+      navigate(`/${matchingArticle.slug}`);
     } else {
       navigate(`/guides/${slug}`);
     }
@@ -104,7 +114,7 @@ export default function App() {
   const handleSelectHardware = (slug: string) => {
     const matchingArticle = ARTICLES.find((a) => a.slug.includes(slug) || a.tags.includes('Hardware'));
     if (matchingArticle) {
-      navigate(`/news/${matchingArticle.slug}`);
+      navigate(`/${matchingArticle.slug}`);
     } else {
       navigate(`/hardware/${slug}`);
     }
@@ -117,10 +127,11 @@ export default function App() {
   // Route Resolver
   const renderCurrentView = () => {
     const path = currentPath;
+    const cleanSlug = path.replace(/^\//, '').replace(/\/$/, '').split('?')[0];
 
     // Homepage
     if (path === '/' || path === '') {
-      document.title = 'GamePulse | Your Daily Pulse on Gaming';
+      document.title = 'GamePulse — Gaming News, Latest Gaming Updates & Video Game News';
       return (
         <HomeView
           onNavigate={navigate}
@@ -131,86 +142,6 @@ export default function App() {
           onSelectGame={handleSelectGame}
         />
       );
-    }
-
-    // Article Details (/news/:slug or /guides/:slug or /reviews/:slug)
-    if (path.startsWith('/news/') || path.startsWith('/reviews/') || path.startsWith('/guides/') || path.startsWith('/hardware/')) {
-      const parts = path.split('/');
-      const slug = parts[2];
-
-      const foundArticle = ARTICLES.find((a) => a.slug === slug || a.id === slug);
-      if (foundArticle) {
-        document.title = `${foundArticle.title} | GamePulse`;
-        return (
-          <ArticleDetailView
-            article={foundArticle}
-            onNavigate={navigate}
-            onSelectArticle={handleSelectArticle}
-          />
-        );
-      }
-
-      // If review with separate model
-      const foundReview = REVIEWS.find((r) => r.slug === slug || r.id === slug);
-      if (foundReview) {
-        // Construct article representation
-        const reviewArticle = ARTICLES.find((a) => a.gameSlug === foundReview.gameSlug) || ARTICLES[0];
-        document.title = `${foundReview.gameTitle} Review | GamePulse`;
-        return (
-          <ArticleDetailView
-            article={reviewArticle}
-            onNavigate={navigate}
-            onSelectArticle={handleSelectArticle}
-          />
-        );
-      }
-
-      // If guide with separate model
-      const foundGuide = GUIDES.find((g) => g.slug === slug || g.id === slug);
-      if (foundGuide) {
-        const guideArticle = ARTICLES.find((a) => a.gameSlug === foundGuide.gameSlug) || ARTICLES[1];
-        document.title = `${foundGuide.title} | GamePulse`;
-        return (
-          <ArticleDetailView
-            article={guideArticle}
-            onNavigate={navigate}
-            onSelectArticle={handleSelectArticle}
-          />
-        );
-      }
-
-      // If hardware product
-      const foundProduct = HARDWARE_PRODUCTS.find((p) => p.slug === slug || p.id === slug);
-      if (foundProduct) {
-        const hwArticle = ARTICLES.find((a) => a.id === 'rtx-5090-benchmarks-breakdown' || a.category === 'Hardware') || ARTICLES[3];
-        document.title = `${foundProduct.name} Benchmark Review | GamePulse`;
-        return (
-          <ArticleDetailView
-            article={hwArticle}
-            onNavigate={navigate}
-            onSelectArticle={handleSelectArticle}
-          />
-        );
-      }
-    }
-
-    // Game Profile (/games/:slug)
-    if (path.startsWith('/games/')) {
-      const slug = path.split('/')[2];
-      const foundGame = GAMES.find((g) => g.slug === slug || g.id === slug);
-      if (foundGame) {
-        document.title = `${foundGame.title} - Game Hub & News | GamePulse`;
-        return (
-          <GameDetailView
-            game={foundGame}
-            onNavigate={navigate}
-            onSelectArticle={handleSelectArticle}
-            onSelectReview={handleSelectReview}
-            onSelectGuide={handleSelectGuide}
-            onSelectGame={handleSelectGame}
-          />
-        );
-      }
     }
 
     // Category Pages
@@ -252,6 +183,116 @@ export default function App() {
           onSelectReview={handleSelectReview}
           onSelectGuide={handleSelectGuide}
           onSelectHardware={handleSelectHardware}
+          onSelectGame={handleSelectGame}
+        />
+      );
+    }
+
+    // Game Profile (/games/:slug)
+    if (path.startsWith('/games/')) {
+      const slug = path.split('/')[2];
+      const foundGame = GAMES.find((g) => g.slug === slug || g.id === slug);
+      if (foundGame) {
+        document.title = `${foundGame.title} - Game Hub & News | GamePulse`;
+        return (
+          <GameDetailView
+            game={foundGame}
+            onNavigate={navigate}
+            onSelectArticle={handleSelectArticle}
+            onSelectReview={handleSelectReview}
+            onSelectGuide={handleSelectGuide}
+            onSelectGame={handleSelectGame}
+          />
+        );
+      }
+    }
+
+    // Prefixed Article Details (/news/:slug, /reviews/:slug, /guides/:slug, /hardware/:slug)
+    if (path.startsWith('/news/') || path.startsWith('/reviews/') || path.startsWith('/guides/') || path.startsWith('/hardware/')) {
+      const parts = path.split('/');
+      const slug = parts[2];
+
+      const foundArticle = findArticle(slug);
+      if (foundArticle) {
+        document.title = `${foundArticle.title} | GamePulse`;
+        return (
+          <ArticleDetailView
+            article={foundArticle}
+            onNavigate={navigate}
+            onSelectArticle={handleSelectArticle}
+          />
+        );
+      }
+
+      // If review with separate model
+      const foundReview = REVIEWS.find((r) => r.slug === slug || r.id === slug);
+      if (foundReview) {
+        const reviewArticle = ARTICLES.find((a) => a.gameSlug === foundReview.gameSlug) || ARTICLES[0];
+        document.title = `${foundReview.gameTitle} Review | GamePulse`;
+        return (
+          <ArticleDetailView
+            article={reviewArticle}
+            onNavigate={navigate}
+            onSelectArticle={handleSelectArticle}
+          />
+        );
+      }
+
+      // If guide with separate model
+      const foundGuide = GUIDES.find((g) => g.slug === slug || g.id === slug);
+      if (foundGuide) {
+        const guideArticle = ARTICLES.find((a) => a.gameSlug === foundGuide.gameSlug) || ARTICLES[1];
+        document.title = `${foundGuide.title} | GamePulse`;
+        return (
+          <ArticleDetailView
+            article={guideArticle}
+            onNavigate={navigate}
+            onSelectArticle={handleSelectArticle}
+          />
+        );
+      }
+
+      // If hardware product
+      const foundProduct = HARDWARE_PRODUCTS.find((p) => p.slug === slug || p.id === slug);
+      if (foundProduct) {
+        const hwArticle = ARTICLES.find((a) => a.id === 'rtx-5090-benchmarks-breakdown' || a.category === 'Hardware') || ARTICLES[3];
+        document.title = `${foundProduct.name} Benchmark Review | GamePulse`;
+        return (
+          <ArticleDetailView
+            article={hwArticle}
+            onNavigate={navigate}
+            onSelectArticle={handleSelectArticle}
+          />
+        );
+      }
+    }
+
+    // Direct Unique Article URL (e.g. /intergalactic-heretic-prophet, /gta-6-news, /fortnite-updates)
+    const directArticle = findArticle(cleanSlug);
+    if (directArticle) {
+      document.title = `${directArticle.title} | GamePulse`;
+      return (
+        <ArticleDetailView
+          article={directArticle}
+          onNavigate={navigate}
+          onSelectArticle={handleSelectArticle}
+        />
+      );
+    }
+
+    // Direct game lookup (e.g., /gta-6 or /ghost-of-yotei)
+    const directGame = GAMES.find(
+      (g) => g.slug.toLowerCase() === cleanSlug.toLowerCase() || g.id.toLowerCase() === cleanSlug.toLowerCase()
+    );
+    if (directGame) {
+      document.title = `${directGame.title} - Game Hub & News | GamePulse`;
+      return (
+        <GameDetailView
+          game={directGame}
+          onNavigate={navigate}
+          onSelectArticle={handleSelectArticle}
+          onSelectReview={handleSelectReview}
+          onSelectGuide={handleSelectGuide}
           onSelectGame={handleSelectGame}
         />
       );

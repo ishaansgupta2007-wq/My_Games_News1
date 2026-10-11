@@ -31,15 +31,15 @@ export const HardwareView: React.FC<HardwareViewProps> = ({ onSelectHardware }) 
   return (
     <div className="space-y-12">
       {/* Header */}
-      <div className="border-b border-neutral-800 pb-8">
-        <div className="flex items-center gap-2.5 text-xs font-mono text-rose-400 uppercase tracking-wider mb-2 font-semibold">
+      <div className="border-b border-neutral-200 dark:border-neutral-800 pb-8">
+        <div className="flex items-center gap-2.5 text-xs font-mono text-rose-500 dark:text-rose-400 uppercase tracking-wider mb-2 font-semibold">
           <Cpu className="w-4 h-4" />
           <span>Silicon & Peripherals Lab</span>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-white font-display tracking-tight mb-4">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white font-display tracking-tight mb-4">
           Hardware Reviews & Benchmarks
         </h1>
-        <p className="text-sm sm:text-base text-neutral-400 max-w-2xl leading-relaxed">
+        <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
           Rigorous frametime analysis, thermal probing, acoustic chamber measurements, and latency tests on graphics cards, processors, OLED monitors, and pro esports peripherals.
         </p>
 

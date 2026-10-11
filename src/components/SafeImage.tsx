@@ -133,21 +133,35 @@ export const SafeImage: React.FC<SafeImageProps> = ({
     }
   };
 
+  // Resolve optimized WebP version if available
+  const getWebpSource = (originalSrc: string): string | null => {
+    if (originalSrc.endsWith('.webp')) return originalSrc;
+    if (originalSrc.startsWith('/images/')) {
+      return originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+    }
+    return null;
+  };
+
+  const webpSrc = getWebpSource(src);
+
   return (
     <div className={`relative overflow-hidden bg-neutral-100 dark:bg-neutral-900 ${className}`}>
       {!error && (
-        <img
-          src={src}
-          alt={alt}
-          referrerPolicy="no-referrer"
-          loading={priority ? 'eager' : 'lazy'}
-          decoding={priority ? 'sync' : 'async'}
-          onLoad={() => setLoaded(true)}
-          onError={() => setError(true)}
-          className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
-            loaded ? 'opacity-100' : 'opacity-0'
-          }`}
-        />
+        <picture className="w-full h-full block">
+          {webpSrc && <source srcSet={webpSrc} type="image/webp" />}
+          <img
+            src={src}
+            alt={alt}
+            referrerPolicy="no-referrer"
+            loading={priority ? 'eager' : 'lazy'}
+            decoding={priority ? 'sync' : 'async'}
+            onLoad={() => setLoaded(true)}
+            onError={() => setError(true)}
+            className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+              loaded ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        </picture>
       )}
       {(error || !loaded) && renderFallback()}
     </div>

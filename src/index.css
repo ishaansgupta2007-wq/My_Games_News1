@@ -51,12 +51,20 @@ html:not(.dark) {
 
 /* 1. Surfaces: Transform card containers from dark to crisp white with subtle border */
 html:not(.dark) .bg-neutral-900:not([data-hero-scrim] *):not(button.bg-rose-600 *):not(button.bg-rose-500 *):not([data-hero-scrim]),
+html:not(.dark) .bg-neutral-900\/40:not([data-hero-scrim] *):not([data-hero-scrim]),
+html:not(.dark) .bg-neutral-900\/50:not([data-hero-scrim] *):not([data-hero-scrim]),
 html:not(.dark) .bg-neutral-900\/60:not([data-hero-scrim] *):not([data-hero-scrim]),
 html:not(.dark) .bg-neutral-900\/70:not([data-hero-scrim] *):not([data-hero-scrim]),
 html:not(.dark) .bg-neutral-900\/80:not([data-hero-scrim] *):not([data-hero-scrim]),
+html:not(.dark) .bg-neutral-900\/85:not([data-hero-scrim] *):not([data-hero-scrim]),
+html:not(.dark) .bg-neutral-900\/90:not([data-hero-scrim] *):not([data-hero-scrim]),
+html:not(.dark) .bg-neutral-950\/40:not([data-hero-scrim] *):not([data-hero-scrim]),
 html:not(.dark) .bg-neutral-950\/60:not([data-hero-scrim] *):not([data-hero-scrim]),
+html:not(.dark) .bg-neutral-950\/70:not([data-hero-scrim] *):not([data-hero-scrim]),
 html:not(.dark) .bg-neutral-950\/80:not([data-hero-scrim] *):not([data-hero-scrim]),
-html:not(.dark) .bg-neutral-950\/90:not([data-hero-scrim] *):not([data-hero-scrim]) {
+html:not(.dark) .bg-neutral-950\/85:not([data-hero-scrim] *):not([data-hero-scrim]),
+html:not(.dark) .bg-neutral-950\/90:not([data-hero-scrim] *):not([data-hero-scrim]),
+html:not(.dark) .bg-neutral-950\/98:not([data-hero-scrim] *):not([data-hero-scrim]) {
   background-color: #ffffff;
   border-color: #e2e8f0;
 }

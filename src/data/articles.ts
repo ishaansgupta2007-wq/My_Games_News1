@@ -4,7 +4,7 @@ import { AUTHORS } from './authors';
 export const ARTICLES: Article[] = [
   {
     id: "intergalactic-heretic-prophet-preview-2027",
-    slug: "intergalactic-the-heretic-prophet-2027-first-look",
+    slug: "intergalactic-heretic-prophet",
     title: "Intergalactic: The Heretic Prophet — Exclusive First Look at 2027’s Bold Sci-Fi Frontier",
     subtitle: "A rogue warrior, hard-light thermal blades, and an eclipsed orbital world: why this newly unveiled IP is setting a breathtaking standard for next-gen sci-fi action.",
     excerpt: "Unveiled with an authoritative 2027 launch window, Intergalactic: The Heretic Prophet plunges players into a shattered star system governed by celestial anomalies and ancient tech.",
@@ -21,7 +21,12 @@ export const ARTICLES: Article[] = [
     isTrending: true,
     trendingRank: 1,
     gameSlug: "intergalactic-heretic-prophet",
+    aliases: ["intergalactic-the-heretic-prophet-2027-first-look", "intergalactic-heretic-prophet", "intergalactic", "the-heretic-prophet"],
     tags: ["Intergalactic", "The Heretic Prophet", "Sci-Fi Action", "PlayStation 5", "2027 Releases"],
+    keywords: {
+      main: "Intergalactic The Heretic Prophet",
+      related: ["Intergalactic gameplay", "sci-fi action RPG"]
+    },
     content: {
       intro: "When the premiere reveal trailer for Intergalactic: The Heretic Prophet concluded with a stark '2027' etched across the silhouette of a fractured planetary eclipse, the entire interactive gaming industry took notice. In an ecosystem increasingly dominated by conservative cross-generational ports, iterative sequels, and live-service treadmills, this bold announcement arrived as a resolute declaration of artistic and technological ambition. Developed specifically for current silicon without legacy hardware compromises, the title plunges players into the pressurized environmental armor of Jordan Voss, a disgraced astral scout navigating the lawless celestial outer reaches of the Sycorax-IV cluster. Armed with a prototype hard-light thermal broadsword and omnidirectional thruster propulsion, Voss must unravel an ancient cosmological mystery while surviving against relentless corporate arbiters and predatory stellar biomechanics.",
       sections: [
@@ -159,6 +164,7 @@ export const ARTICLES: Article[] = [
     isTrending: true,
     trendingRank: 2,
     gameSlug: "resident-evil-veronica",
+    aliases: ["resident-evil-veronica", "code-veronica"],
     tags: [
       "Resident Evil",
       "Code Veronica",
@@ -167,6 +173,10 @@ export const ARTICLES: Article[] = [
       "Survival Horror",
       "RE Engine",
     ],
+    keywords: {
+      main: "Resident Evil Code Veronica remake",
+      related: ["Resident Evil news", "RE Engine horror games"]
+    },
     content: {
       intro: "For over two decades, survival horror enthusiasts have carried an unspoken, fervent plea in their hearts: that Capcom would eventually grant Resident Evil Code: Veronica the full, uncompromising reimagining it has so richly deserved. While mainline numbered installments received lavish reimaginings that redefined contemporary horror benchmarks, the chronicle of Claire Redfield’s harrowing search for her brother Chris remained confined to nostalgic Dreamcast memory cards. Today, that enduring vigil concluded in explosive fashion. With a blood-drenched teaser radiating cold gothic despair, Capcom officially confirmed Resident Evil: Veronica—a ground-up rebuilding of Rockfort Island and the Antarctic transport base engineered on the most sophisticated iteration of the RE Engine yet conceived.",
       sections: [
@@ -308,6 +318,10 @@ export const ARTICLES: Article[] = [
     trendingRank: 3,
     gameSlug: "marvel-wolverine",
     tags: ["Marvel Wolverine", "Spider-Man", "Insomniac Games", "PlayStation 5", "Combat Design"],
+    keywords: {
+      main: "Marvel Wolverine game news",
+      related: ["Insomniac Wolverine updates", "Marvel gaming universe"]
+    },
     content: {
       intro: "When Marvel’s Spider-Man swung onto PlayStation consoles, it accomplished far more than delivering the definitive interactive simulator of web-slinging acrobatics; it established Insomniac Games as the undisputed champions of contemporary superhero storytelling. Yet beneath the bright primary colors and uplifting optimism of Peter Parker and Miles Morales' Manhattan, seeds were quietly being planted for a much darker, morally ambiguous sister universe. With Marvel’s Wolverine hurtling toward launch, Insomniac has begun pulling back the curtain on how these two radically disparate creative visions coexist within a unified Marvel Interactive Continuity—balancing teenage heartbreak and civic duty against three centuries of feral trauma, blood-soaked taverns, and unspeakable black-ops experimentation.",
       sections: [
@@ -457,6 +471,10 @@ export const ARTICLES: Article[] = [
     trendingRank: 4,
     gameSlug: "tomb-raider-legacy-of-atlantis",
     tags: ["Tomb Raider", "Legacy of Atlantis", "Lara Croft", "Unreal Engine 5", "Action Adventure"],
+    keywords: {
+      main: "Tomb Raider Legacy of Atlantis",
+      related: ["new Tomb Raider game", "Lara Croft Unreal Engine 5"]
+    },
     content: {
       intro: "Ever since Lara Croft made video game history in 1996 by flipping across crumbling limestone blocks and gunning down velociraptors in subterranean caverns, the myth of the lost continent of Atlantis has stood as her definitive rite of passage. While the modern Survivor Trilogy provided a grounded, gritty origin story focusing on makeshift bows and survivalist endurance, fans have long yearned for the return of the iconic, confident, globe-trotting master archaeologist at the absolute height of her physical and intellectual powers. In a showstopping PlayStation showcase world premiere, Crystal Dynamics officially announced Tomb Raider: Legacy of Atlantis—a breathtaking, full-scale reimagining of ancient mythological wonder powered by Unreal Engine 5.",
       sections: [
@@ -610,6 +628,10 @@ export const ARTICLES: Article[] = [
     trendingRank: 1,
     gameSlug: 'ghost-of-yotei',
     tags: ['Ghost of Yotei', 'PlayStation 5', 'Sucker Punch', 'Open World', 'Action RPG'],
+    keywords: {
+      main: 'Ghost of Yotei preview',
+      related: ['Ghost of Yotei gameplay', 'PS5 open world games']
+    },
     content: {
       intro: 'When Sucker Punch Productions unveiled Ghost of Yōtei, the immediate reaction was palpable astonishment. Rather than returning to Tsushima Island or continuing Jin Sakai’s lineage, the studio made a daring creative pivot: jumping three centuries forward into 1603 Japan, anchoring the narrative around a fierce new protagonist named Atsu beneath the towering presence of Mount Yōtei.',
       sections: [
@@ -669,6 +691,10 @@ export const ARTICLES: Article[] = [
     trendingRank: 2,
     gameSlug: 'elden-ring',
     tags: ['Elden Ring', 'PC Gaming', 'FromSoftware', 'Optimization', 'Guides'],
+    keywords: {
+      main: 'Elden Ring controller guide',
+      related: ['Shadow of the Erdtree PC controls', 'Elden Ring settings optimization']
+    },
     content: {
       intro: 'The Realm of Shadow features some of the fastest, most acrobatic encounters in FromSoftware history. From Messmer the Impaler’s aerial serpentine strikes to Commander Gaius’s erratic charges, players across Steam forums have debated input responsiveness and erratic camera tracking.',
       sections: [
@@ -698,13 +724,13 @@ export const ARTICLES: Article[] = [
   },
   {
     id: 'gta-6-vice-city-simulation-engine',
-    slug: 'gta-6-vice-city-next-gen-simulation-engine',
+    slug: 'gta-6-news',
     title: 'GTA 6: Deep Inside Rockstar’s Next-Gen NPC Brains and Dynamic Weather Tech',
-    subtitle: 'Rockstar Games is preparing to establish an entirely new bar for open-world simulation in Leonida.',
-    excerpt: 'Leaked architectural patents and industry filings reveal how Grand Theft Auto VI utilizes volumetric fluid dynamics, realistic tidal schedules, and social memory routines.',
+    subtitle: 'With fans hungry for the latest GTA 6 news, new technical filings reveal how GTA 6 updates and official GTA 6 release news point toward next-gen simulation standards in Leonida.',
+    excerpt: 'The newest GTA 6 news outlines leaked architectural patents and GTA 6 updates, revealing volumetric fluid dynamics, AI routines, and anticipation for GTA 6 release news.',
     category: 'News',
     subCategory: 'Industry Analysis',
-    coverImage: '/images/gta-6-screenshot.png',
+    coverImage: '/images/gta-6-leonida-keys.webp',
     fallbackTheme: 'gta',
     author: AUTHORS.alex_vance,
     publishedAt: 'Oct 07, 2026',
@@ -715,9 +741,14 @@ export const ARTICLES: Article[] = [
     isTrending: true,
     trendingRank: 3,
     gameSlug: 'gta-6',
+    aliases: ['gta-6-vice-city-next-gen-simulation-engine', 'gta-6-news', 'gta-6', 'grand-theft-auto-6'],
     tags: ['GTA 6', 'Rockstar Games', 'PlayStation 5', 'Xbox Series X', 'Open World'],
+    keywords: {
+      main: 'GTA 6 news',
+      related: ['GTA 6 updates', 'GTA 6 release news']
+    },
     content: {
-      intro: 'Few upcoming video games carry the cultural gravitational pull of Grand Theft Auto VI. With Rockstar Games targeting an autumn release window, technical details surrounding RAGE Engine 9 indicate a generation-defining leap in artificial intelligence and world volatility.',
+      intro: 'Few headlines in entertainment command the gravitational pull of genuine GTA 6 news. As the gaming world sifts through community rumors for verified GTA 6 updates and official GTA 6 release news, technical briefings surrounding RAGE Engine 9 demonstrate a generation-defining leap in artificial intelligence and world volatility.',
       sections: [
         {
           heading: 'NPC Memory Networks and Emotional Profiles',
@@ -755,6 +786,10 @@ export const ARTICLES: Article[] = [
     isFeatured: false,
     isTrending: false,
     tags: ['Hardware', 'DualSense', 'PlayStation 5', 'Accessories', 'Review'],
+    keywords: {
+      main: 'PS5 DualSense review',
+      related: ['Ghost of Yotei controller', 'DualSense haptics analysis']
+    },
     content: {
       intro: 'Special edition controllers often walk a thin line between tasteful homage and garish merchandise. The Ghost of Yōtei DualSense Wireless Controller firmly commands the former category.',
       sections: [
@@ -801,6 +836,10 @@ export const ARTICLES: Article[] = [
     trendingRank: 4,
     gameSlug: 'god-of-war-ragnarok',
     tags: ['God of War', 'PlayStation', 'Combat Design', 'Santa Monica Studio', 'Deep Dive'],
+    keywords: {
+      main: 'God of War Ragnarok combat guide',
+      related: ['God of War tactical analysis', 'Kratos combat mechanics']
+    },
     content: {
       intro: 'When Kratos drives the Leviathan Axe into a charging troll or parries Gná’s lightning strikes, the impact resonates beyond the screen. Santa Monica Studio’s combat designers achieved something rare in 3D action gaming: combining cinematic heft with esports-grade mechanical precision.',
       sections: [
@@ -841,6 +880,10 @@ export const ARTICLES: Article[] = [
     isTrending: true,
     trendingRank: 5,
     tags: ['Hardware', 'Battlestation', 'PC Gaming', 'OLED', 'Ergonomics'],
+    keywords: {
+      main: 'gaming battlestation setup',
+      related: ['PC gaming desk guide', 'clean gaming setup ideas']
+    },
     content: {
       intro: 'The era of chaotic, blinding rainbow RGB setups is officially over. Today’s premier gaming spaces prioritize architectural lines, warm neutral ambient illumination, acoustic wall dampening, and invisible cable routing.',
       sections: [
@@ -877,6 +920,10 @@ export const ARTICLES: Article[] = [
     publishedAt: 'Oct 04, 2026',
     readTime: '6 min read',
     tags: ['Xbox', 'Microsoft', 'Handheld', 'PC Gaming', 'Game Pass'],
+    keywords: {
+      main: 'next-gen Xbox console',
+      related: ['Xbox handheld updates', 'Microsoft gaming strategy']
+    },
     content: {
       intro: 'The traditional console box war is evolving into an ecosystem war. Phil Spencer and Xbox leadership are orchestrating an aggressive pivot that puts Game Pass and Windows gaming at the forefront.',
       sections: [
@@ -905,6 +952,10 @@ export const ARTICLES: Article[] = [
     publishedAt: 'Oct 03, 2026',
     readTime: '8 min read',
     tags: ['NVIDIA', 'RTX 5090', 'GPU', 'PC Gaming', 'Hardware'],
+    keywords: {
+      main: 'RTX 5090 benchmarks',
+      related: ['Nvidia RTX 5090 review', 'Blackwell GPU gaming performance']
+    },
     content: {
       intro: 'NVIDIA’s RTX 50-series arrives with astronomical expectations. Blackwell introduces TSMC’s customized 4NP node and the debut of lightning-fast GDDR7 memory modules running at 28 Gbps.',
       sections: [
@@ -917,6 +968,116 @@ export const ARTICLES: Article[] = [
         }
       ],
       conclusion: 'While the price tag commands a premium enthusiast investment, the RTX 5090 cements absolute graphics card supremacy for the next three years.'
+    }
+  },
+  {
+    id: 'fortnite-chapter-6-season-2-overhaul',
+    slug: 'fortnite-updates',
+    title: 'Fortnite Updates: Chapter 6 Meta Overhaul, Weapon Balancing, and Unreal Engine 5.5 Physics',
+    subtitle: 'Epic Games unleashes dynamic terrain deformation, projectile ballistic rebalancing, and tactical competitive siphon adjustments in the newest Fortnite updates.',
+    excerpt: 'Our comprehensive breakdown of the newest Fortnite updates and competitive Fortnite news, detailing weapon sandbox balancing, movement overhauls, and the Fortnite new season roadmap.',
+    category: 'Esports',
+    subCategory: 'Meta & Live Service',
+    coverImage: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80',
+    fallbackTheme: 'esports',
+    author: AUTHORS.marcus_foster,
+    publishedAt: 'Oct 09, 2026',
+    readTime: '6 min read',
+    isBreaking: true,
+    isFeatured: true,
+    isTrending: true,
+    trendingRank: 4,
+    gameSlug: 'fortnite',
+    aliases: ['fortnite-updates', 'fortnite', 'fortnite-chapter-6', 'fortnite-news', 'fortnite-meta'],
+    tags: ['Fortnite', 'Battle Royale', 'Esports', 'Competitive', 'Unreal Engine 5'],
+    keywords: {
+      main: 'Fortnite updates',
+      related: ['Fortnite news', 'Fortnite new season']
+    },
+    content: {
+      intro: 'Epic Games has rolled out the most comprehensive competitive Fortnite updates in recent battle royale history. Delivering groundbreaking competitive Fortnite news, the arrival of this Fortnite new season transitions the game to refined Unreal Engine 5.5 rendering pipelines, introduces dynamic environmental destruction physics, and radically recalibrates weapon ballistics for high-stakes tournament play.',
+      sections: [
+        {
+          heading: 'Weapon Sandbox Recalibration and Hitscan Adjustments',
+          id: 'weapon-sandbox-recalibration',
+          paragraphs: [
+            'The core weapon sandbox in this update addresses community feedback regarding long-range lethality and shotgun consistency. Sniper bullet drop curves have been standardized across all rarities, while assault rifles now feature tailored recoil recovery ceilings that reward disciplined trigger pacing over continuous spray.',
+            'Shotgun pull-out delays have been reduced by 15% across the board, providing aggressive box-fighters and close-quarter specialists with snappier reactive combat mechanics during high-pressure late-game endgame circles.'
+          ]
+        },
+        {
+          heading: 'Unreal Engine 5.5 Chaos Destruction & Performance Mode',
+          id: 'ue55-chaos-destruction',
+          paragraphs: [
+            'Under the hood, Fortnite now utilizes optimized Chaos destruction routines that simulate structural stress realistically without inducing server tick-rate jitter. Wooden, brick, and metal structures now exhibit localized stress fractures prior to complete collapse under explosive fire.',
+            'For competitive PC players, Epic has revamped Performance Mode with streamlined asynchronous shader delivery, eliminating micro-stutters during 50-player endgame moving storm circles.'
+          ]
+        },
+        {
+          heading: 'Tournament Circuit Guidelines & Siphon Mechanics',
+          id: 'tournament-siphon-rules',
+          paragraphs: [
+            'FNCS and ranked competitive queues receive the anticipated return of the calibrated Siphon mechanic: 50 effective health or shield granted instantly upon securing an elimination, paired with 50 materials of each type.',
+            'This adjustment restores fast-paced tactical recovery during congested late-game rotations and solidifies Fortnite’s place at the apex of global esports spectacle.'
+          ]
+        }
+      ],
+      conclusion: 'With intelligent competitive balance choices and substantial technical enhancements, these Fortnite updates establish an outstanding foundation for the upcoming tournament season.'
+    }
+  },
+  {
+    id: 'forza-horizon-6-next-gen-open-world',
+    slug: 'forza-horizon-news',
+    title: 'Forza Horizon News: Next-Gen Japan Festival, Ray-Traced Weather, and Dynamic Physics Revealed',
+    subtitle: 'Playground Games showcases cutting-edge simulation tech, sprawling mountain passes, and a breathtaking open world in the latest Forza Horizon news.',
+    excerpt: 'The biggest Forza Horizon news of the year has arrived: deep dive into next-generation Forza Horizon gameplay mechanics, dynamic season shifts, and ongoing Forza Horizon updates.',
+    category: 'Xbox',
+    subCategory: 'World Premiere Feature',
+    coverImage: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80',
+    fallbackTheme: 'hardware',
+    author: AUTHORS.alex_vance,
+    publishedAt: 'Oct 10, 2026',
+    readTime: '9 min read',
+    isBreaking: true,
+    isFeatured: true,
+    isTrending: true,
+    trendingRank: 2,
+    gameSlug: 'forza-horizon',
+    aliases: ['forza-horizon-news', 'forza-horizon-6', 'forza-horizon', 'forza-horizon-gameplay', 'forza-horizon-updates'],
+    tags: ['Forza Horizon', 'Xbox Series X', 'PC Gaming', 'Racing', 'Playground Games'],
+    keywords: {
+      main: 'Forza Horizon news',
+      related: ['Forza Horizon gameplay', 'Forza Horizon updates']
+    },
+    content: {
+      intro: 'Sim-racing enthusiasts and automotive petrolheads have reason to celebrate as landmark Forza Horizon news officially confirms the franchise’s most technically ambitious installment to date. Showcasing unprecedented visual fidelity, revolutionary Forza Horizon gameplay physics, and a roadmap for live-service Forza Horizon updates, Playground Games is setting an extraordinary high-water mark for open-world automotive culture.',
+      sections: [
+        {
+          heading: 'Photorealistic Mountain Passes & Volumetric Japanese Weather',
+          id: 'japanese-festival-biomes',
+          paragraphs: [
+            'Set against the diverse geography of Japan, the next Horizon Festival spans high-density Tokyo neon corridors, mist-shrouded Mount Fuji touge passes, and coastal rural villages. The studio’s updated proprietary engine delivers true volumetric atmospheric moisture, where sudden autumn downpours create localized hydroplaning risks across asphalt grooves.',
+            'Each car model features full acoustic ray tracing, accurately echoing exhaust pops off tunnel walls and wet retaining barriers with surgical fidelity.'
+          ]
+        },
+        {
+          heading: 'Revolutionary Handling Physics & Force Feedback Overhaul',
+          id: 'handling-physics-feedback',
+          paragraphs: [
+            'Forza Horizon gameplay takes a decisive leap forward with a complete tire contact patch simulation running at 360 Hz. Rather than relying on simplified arcade approximations, suspension geometry dynamically accounts for tire wall flex, camber deflection under hard compression, and uneven gravel dispersion.',
+            'Direct-drive wheel users and controller drivers alike will feel micro-slips before sudden oversteer, rewarding nuanced throttle modulation through tight hairpin complexes.'
+          ]
+        },
+        {
+          heading: 'Seasonal Festival Evolution & Live Service Roadmap',
+          id: 'seasonal-festival-evolution',
+          paragraphs: [
+            'Long-term player retention is anchored by scheduled Forza Horizon updates that rotate map events, introduce community custom routes, and cycle exclusive legendary classic homologation cars into seasonal playlists.',
+            'With cross-play support across PC and Xbox Series consoles alongside seamless 120 FPS performance modes, the stage is set for a genre-defining open-world racing masterclass.'
+          ]
+        }
+      ],
+      conclusion: 'Between breathtaking environmental rendering and refined simulation depth, this monumental Forza Horizon news proves that Playground Games remains unmatched in the open-world driving pantheon.'
     }
   }
 ];

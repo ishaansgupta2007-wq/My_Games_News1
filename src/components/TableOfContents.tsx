@@ -52,8 +52,8 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ items }) => {
   };
 
   return (
-    <div className="sticky top-24 rounded-xl bg-neutral-900/60 border border-neutral-800/80 p-5 backdrop-blur-md">
-      <div className="flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-neutral-400 mb-4 pb-3 border-b border-neutral-800">
+    <div className="sticky top-24 rounded-xl bg-white dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800/80 p-5 backdrop-blur-md shadow-xs dark:shadow-none">
+      <div className="flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 mb-4 pb-3 border-b border-neutral-200 dark:border-neutral-800">
         <AlignLeft className="w-4 h-4 text-rose-500" />
         <span>In This Story</span>
       </div>
@@ -67,11 +67,11 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ items }) => {
               onClick={() => scrollToSection(item.id)}
               className={`block w-full text-left text-xs transition-colors py-1 pl-3 border-l-2 cursor-pointer ${
                 isActive
-                  ? 'border-rose-500 text-white font-medium pl-3 bg-neutral-800/40 rounded-r'
-                  : 'border-neutral-800 text-neutral-400 hover:text-neutral-200 hover:border-neutral-600'
+                  ? 'border-rose-500 text-rose-600 dark:text-white font-medium pl-3 bg-rose-50 dark:bg-neutral-800/40 rounded-r'
+                  : 'border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 hover:border-neutral-400 dark:hover:border-neutral-600'
               }`}
             >
-              <span className="font-mono text-neutral-500 mr-2 text-[10px]">
+              <span className="font-mono text-neutral-400 dark:text-neutral-500 mr-2 text-[10px]">
                 {String(idx + 1).padStart(2, '0')}.
               </span>
               <span>{item.heading}</span>

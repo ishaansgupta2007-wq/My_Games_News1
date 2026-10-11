@@ -27,9 +27,9 @@ export const GameReleaseCard: React.FC<GameReleaseCardProps> = ({ game, onSelect
   return (
     <div
       onClick={() => onSelectGame?.(game.slug)}
-      className="group flex flex-col rounded-2xl overflow-hidden bg-neutral-900/85 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900 transition-all cursor-pointer shadow-lg"
+      className="group flex flex-col rounded-2xl overflow-hidden bg-white dark:bg-neutral-900/85 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 hover:bg-slate-50 dark:hover:bg-neutral-900 transition-all cursor-pointer shadow-xs dark:shadow-lg"
     >
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-950">
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100 dark:bg-neutral-950">
         <SafeImage
           src={game.coverImage}
           alt={game.title}
@@ -40,7 +40,7 @@ export const GameReleaseCard: React.FC<GameReleaseCardProps> = ({ game, onSelect
         {/* Status indicator */}
         <div className="absolute top-3 left-3 flex items-center gap-1.5">
           <span
-            className={`px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase font-bold tracking-wider border backdrop-blur-md shadow-md ${getStatusColor(
+            className={`px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase font-bold tracking-wider border backdrop-blur-md shadow-xs ${getStatusColor(
               game.status
             )}`}
           >
@@ -49,7 +49,7 @@ export const GameReleaseCard: React.FC<GameReleaseCardProps> = ({ game, onSelect
         </div>
 
         {/* Hype Score Pill */}
-        <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-neutral-950/90 border border-neutral-800 text-[11px] font-mono text-rose-400 font-bold flex items-center gap-1 shadow-md">
+        <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-white/90 dark:bg-neutral-950/90 border border-neutral-200 dark:border-neutral-800 text-[11px] font-mono text-rose-600 dark:text-rose-400 font-bold flex items-center gap-1 shadow-xs">
           <Flame className="w-3.5 h-3.5 fill-rose-500/20 text-rose-500" />
           <span>{game.hypeScore}% Anticipation</span>
         </div>
@@ -62,24 +62,24 @@ export const GameReleaseCard: React.FC<GameReleaseCardProps> = ({ game, onSelect
             {game.platforms.map((p) => (
               <span
                 key={p}
-                className="text-[10px] font-mono text-neutral-400 bg-neutral-950 px-2 py-0.5 rounded border border-neutral-800/80"
+                className="text-[10px] font-mono text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-950 px-2 py-0.5 rounded border border-neutral-200 dark:border-neutral-800/80"
               >
                 {p}
               </span>
             ))}
           </div>
 
-          <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-rose-200 transition-colors font-display line-clamp-1 mb-1.5 tracking-tight">
+          <h3 className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-200 transition-colors font-display line-clamp-1 mb-1.5 tracking-tight">
             {game.title}
           </h3>
 
-          <p className="text-xs text-neutral-400 line-clamp-2 leading-relaxed mb-4">
+          <p className="text-xs text-neutral-600 dark:text-neutral-400 line-clamp-2 leading-relaxed mb-4">
             {game.description}
           </p>
         </div>
 
-        <div className="pt-3 border-t border-neutral-800/80 flex items-center justify-between text-xs">
-          <div className="flex items-center gap-1.5 text-rose-400 font-mono font-semibold">
+        <div className="pt-3 border-t border-neutral-200 dark:border-neutral-800/80 flex items-center justify-between text-xs">
+          <div className="flex items-center gap-1.5 text-rose-600 dark:text-rose-400 font-mono font-semibold">
             <Calendar className="w-3.5 h-3.5 text-rose-500" />
             <span>{game.releaseDate}</span>
           </div>
@@ -91,18 +91,18 @@ export const GameReleaseCard: React.FC<GameReleaseCardProps> = ({ game, onSelect
             }}
             className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-mono transition-colors cursor-pointer border ${
               tracked
-                ? 'bg-rose-950/80 text-rose-300 border-rose-800'
-                : 'bg-neutral-950 text-neutral-400 hover:text-white border-neutral-800 hover:border-neutral-700'
+                ? 'bg-rose-50 dark:bg-rose-950/80 text-rose-600 dark:text-rose-300 border-rose-200 dark:border-rose-800'
+                : 'bg-white dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700'
             }`}
           >
             {tracked ? (
               <>
-                <Check className="w-3 h-3 text-rose-400" />
+                <Check className="w-3 h-3 text-rose-500" />
                 <span>Tracked</span>
               </>
             ) : (
               <>
-                <Bell className="w-3 h-3 text-neutral-500" />
+                <Bell className="w-3 h-3 text-neutral-400" />
                 <span>Track</span>
               </>
             )}

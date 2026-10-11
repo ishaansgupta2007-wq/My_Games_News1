@@ -24,15 +24,15 @@ export const ReviewsView: React.FC<ReviewsViewProps> = ({ onSelectReview }) => {
   return (
     <div className="space-y-12">
       {/* Header */}
-      <div className="border-b border-neutral-800 pb-8">
-        <div className="flex items-center gap-2.5 text-xs font-mono text-rose-400 uppercase tracking-wider mb-2 font-semibold">
+      <div className="border-b border-neutral-200 dark:border-neutral-800 pb-8">
+        <div className="flex items-center gap-2.5 text-xs font-mono text-rose-500 dark:text-rose-400 uppercase tracking-wider mb-2 font-semibold">
           <Star className="w-4 h-4 fill-rose-500/20" />
           <span>Independent Criticism</span>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-white font-display tracking-tight mb-4">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white font-display tracking-tight mb-4">
           Game Reviews
         </h1>
-        <p className="text-sm sm:text-base text-neutral-400 max-w-2xl leading-relaxed">
+        <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
           Comprehensive, zero-compromise critical evaluations. Every review includes explicit platform testing specs, frame pacing analysis, and unbiased numerical scores from 1 to 10.
         </p>
 
@@ -42,8 +42,8 @@ export const ReviewsView: React.FC<ReviewsViewProps> = ({ onSelectReview }) => {
             activeCategory={selectedPlatform}
             onSelectCategory={setSelectedPlatform}
           />
-          <div className="flex items-center gap-2 text-xs font-mono text-neutral-500 bg-neutral-900/60 px-3 py-1.5 rounded-lg border border-neutral-800">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+          <div className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-500 bg-white dark:bg-neutral-900/60 px-3 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-800 shadow-xs dark:shadow-none">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" />
             <span>GamePulse Review Guidelines Applied</span>
           </div>
         </div>

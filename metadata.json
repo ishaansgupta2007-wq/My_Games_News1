@@ -1,6 +1,6 @@
 {
   "name": "GamePulse",
-  "description": "Your daily pulse on gaming. A premium, modern gaming publication featuring breaking news, in-depth reviews, expert guides, upcoming releases, and hardware benchmarks.",
+  "description": "Discover authoritative gaming news, the latest gaming updates, and in-depth video game news. Comprehensive coverage of GTA 6, Fortnite, Forza Horizon, hardware benchmarks, and scored reviews.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
